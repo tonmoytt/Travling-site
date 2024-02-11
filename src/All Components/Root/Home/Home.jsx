@@ -13,7 +13,6 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Location></Location>
             <Imagesection></Imagesection>
             <DestinationsBenner></DestinationsBenner>
             <Post></Post>
