@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#dropdown li{
+position: relative;
+}
+#dropmenu a{
+    transition: all 0.25s ease;
+    display: block;
+}
+ 
+
+#submenu{
+ z-index: 1;
+visibility: hidden;
+background-color: white;
+margin-top: 44px;
+padding-right: 80px;
+padding-left: 10px;
+padding-bottom: 10px;
+border-radius: 10px;
+position: absolute;
+}
+ 
+
+li:hover ul#submenu{
+    visibility: visible;
+}

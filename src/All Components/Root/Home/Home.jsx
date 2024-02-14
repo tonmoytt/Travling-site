@@ -1,5 +1,4 @@
 import Banner from "./Banner/Banner";
-import Location from "./Banner/Location/Location";
 import DestinationsBenner from "./DestinationsBenner/DestinationsBenner";
 import Footer from "./Footer/Footer";
 import Imagesection from "./Imagesection/Imagesection";

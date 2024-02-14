@@ -4,8 +4,8 @@ import { FaInstagram, FaTwitterSquare, FaYoutube } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <div className="bg-gray-900 items-center  text-gray-400 flex  justify-between">
-            <div className="bg-gray-900 text-gray-400 py-4 md:px-10 ">
+        <div className="bg-gray-900 items-center text-sm text-gray-400 flex  justify-between">
+            <div className="bg-gray-900 text-gray-400 py-2 md:px-10 ">
                 <div className="flex  ">
                     <div className="flex gap-2 items-center">
                         <div className="mt-1">
@@ -23,7 +23,7 @@ const Header = () => {
 
                     <div className="flex gap-2 items-center">
                         <div>
-                            <MdMarkEmailUnread></MdMarkEmailUnread>
+                            <MdMarkEmailUnread className="mt-1"></MdMarkEmailUnread>
                         </div>
                         <div>
                             <p>travelerwp@gmail.com</p>

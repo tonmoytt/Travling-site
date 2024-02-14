@@ -1,0 +1,44 @@
+  [
+      {
+        "id": 1,
+        "image": "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+        "name": "Agoda",
+        "location": "New York, NY",
+        "rating": 5,
+        "rating2": "5 / 5",
+        "price": "$200"
+      },
+      {
+        "id": 2,
+        "image": "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+        "name": "OneFineStay",
+        "location": "Los Angeles, CA",
+        "rating": 5,
+        "rating2": "4.9/ 5",
+        "price": "$180"
+      },
+      {
+        "id": 3,
+        "image": "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+        "name": "Hotel Expedia",
+        "location": "Chicago, IL",
+        "rating": 5,
+        "rating2":  "5 / 5",
+        "price": "$220"
+      },
+      {
+        "id": 4,
+        "image": "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+        "name": "Priceline",
+        "location": "Miami, FL",
+        "rating": 4,
+        "rating2": "4.6/ 5",
+        "price": "$250"
+      }
+    ]
+  
+  

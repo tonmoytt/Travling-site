@@ -1,5 +1,4 @@
 import { IoCalendarNumberOutline, IoLocationOutline } from "react-icons/io5";
-import { IoCalendarNumberSharp } from "react-icons/io5";
 import { BsCalendarDate } from "react-icons/bs";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiUsers } from "react-icons/hi2";
@@ -8,21 +7,22 @@ const Banner = () => {
 
 
   return (
+      <div className="">
     <div>
-      <div className="hero   h-[400px] relative" style={{ backgroundImage: 'url(https://cdn.blastness.info/media/389/colonnaresort-top/thumbs/full/iti_colonnaresort_esterni3_top.jpg)' }}>
+      <div className="hero  h-[400px] " style={{ backgroundImage: 'url(https://cdn.blastness.info/media/389/colonnaresort-top/thumbs/full/iti_colonnaresort_esterni3_top.jpg)' }}>
         <div className="hero-overlay bg-opacity-20"></div>
 
 
 
         <div className="hero-content text-center text-neutral-content">
           <div className="">
-            <h1 className="mb-5 text-6xl font-extrabold  text-white font-serif">Find your next stay</h1>
+            <h1 className="mb-5 text-7xl font-extrabold  text-white font-serif">Find your next stay</h1>
             <p className="font-semibold text-white text-lg">Get the best prices on 2,000,000+ properties, worldwide</p>
           </div>
         </div>
       </div>
 
-      <div className="absolute mt-2 grid md:grid-cols-5 justify-between mx-4 px-3 py-2 border rounded-full ">
+      <div className="absolute -mt-12 bg-white grid md:grid-cols-5 justify-between mx-5 px-4 py-2 border rounded-full ">
         {/* section 1 */}
         <div className="flex items-center   ">
 
@@ -80,9 +80,9 @@ const Banner = () => {
 
           <div>
 
-           
-       
-            <IoCalendarNumberOutline  className="h-6 w-6"></IoCalendarNumberOutline>
+
+
+            <IoCalendarNumberOutline className="h-6 w-6"></IoCalendarNumberOutline>
           </div>
 
           <div>
@@ -108,20 +108,29 @@ const Banner = () => {
 
             <input className="ml-2 border rounded-xl px-2 " type="date" name="" id="" />
           </div>
-          <div className="border-r-2 bg-gray-700 md:mx-10 mb-2 h-9">
+          <div className="  bg-gray-700 border-r-2  md:mx-10 mb-2 h-9 mt-4">
 
           </div>
         </div>
         {/* section 5 */}
-        <div className="bg-blue-500 flex  items-center px-4 py- rounded-full">
+        
+           <div className="bg-blue-500 flex  items-center px-4 py- rounded-full">
+
           <div>
             <CiSearch></CiSearch>
           </div>
-          <div className="text-white text-lg ml-2 ">Search</div>
+        
+            <div className="text-white text-lg ml-2 ">Search</div>
+            
+       
         </div>
+       
 
 
       </div>
+    </div >
+  
+
     </div>
   );
 };
