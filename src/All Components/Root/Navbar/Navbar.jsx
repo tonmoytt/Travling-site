@@ -184,11 +184,11 @@ const Navbar = () => {
                             <Link to="/Detail hotel 2">
                                 <li className="font-semibold pl-6   text-lg   pt-6 hover:text-blue-500"> Detail hotel 2 </li>
                             </Link>
-                            <Link>
+                            <Link to="/room1">
                                 <li className="font-semibold pl-6  text-lg   pt-6 hover:text-blue-500"> Detail Room 1 </li>
 
                             </Link>
-                            <Link>
+                            <Link to="/room2">
                                 <li className="font-semibold pl-6   text-lg pb-3  pt-6 hover:text-blue-500"> Detail Room 2 </li>
                             </Link>
                         </ul>
@@ -213,10 +213,10 @@ const Navbar = () => {
                             <Link>
                                 <li className="font-semibold  pl-5  text-lg   pt-6 hover:text-blue-500"> Become Local expert </li>
                             </Link>
-                            <Link>
+                            <Link to="/login">
                                 <li className="font-semibold  pl-5 text-lg   pt-6 hover:text-blue-500"> Functional login </li>
                             </Link>
-                            <Link>
+                            <Link to="/signup">
                                 <li className="font-semibold  pl-5 text-lg   pt-6 hover:text-blue-500"> Functional Register </li>
                             </Link>
                             <Link>
@@ -228,7 +228,7 @@ const Navbar = () => {
                             <Link>
                                 <li className="font-semibold  pl-5  text-lg pb-3  pt-6 hover:text-blue-500"> 404 </li>
                             </Link>
-                            <Link>
+                            <Link to="/wishlist">
                                 <li className="font-semibold  pl-5  text-lg pb-3  pt-6 hover:text-blue-500"> Functional wishlist </li>
                             </Link>
                         </ul>
