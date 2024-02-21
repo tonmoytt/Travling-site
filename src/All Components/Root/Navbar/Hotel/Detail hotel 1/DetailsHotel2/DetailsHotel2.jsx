@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
-import img1 from "./../../../../../assets/images/hotel details 1pic.png"
-import img2 from "./../../../../../assets/images/hotel details 1pic222222.png"
-import img3 from "./../../../../../assets/images/hotel details 1pic333333.png"
-import img4 from "./../../../../../assets/images/hotel details 1pic4444.png"
-import img5 from "./../../../../../assets/images/hotel details 1pic444444.png"
-import love from "./../../../../../assets/images/bal-removebg-preview.png"
+import Footer from "../../../../Home/Footer/Footer";
 
-import Footer from "../../../Home/Footer/Footer";
+
+import img1 from "./../../../../../../assets/images/hotel details 2pic 111.png"
+import img2 from "./../../../../../../assets/images/hotel details 2pic 2222.png"
+import img3 from "./../../../../../../assets/images/hotel details 2pic 3333.png"
+import img4 from "./../../../../../../assets/images/hotel details 2pic 44444.png"
+import img5 from "./../../../../../../assets/images/hotel details 2pic 55555.png"
+import love from "./../../../../../../assets/images/bal-removebg-preview.png"
+ 
+ 
+
+
 
 import { RiShareForwardLine } from "react-icons/ri";
 import { TbAirConditioning } from "react-icons/tb";
@@ -18,14 +23,15 @@ import { IoIosFitness } from "react-icons/io";
 import { BsSignNoParkingFill } from "react-icons/bs";
 import { BiSolidWasher } from "react-icons/bi";
 
-const Detailhotel1 = () => {
+
+const DetailsHotel2 = () => {
     return (
         <div>
             <div className="py-5 border-t-2 border-b-2 mt-2 ">
                 <div className="flex gap-x-10 pl-6 ">
                     <Link to="/"> <h1 className=" font-semibold">Home</h1></Link>
                     <Link to="/unitedstate"> <h1 className=" font-semibold">United State</h1></Link>
-                    <h1 className=" text-gray-500">Studio Allston Hotel</h1>
+                    <h1 className=" text-gray-500">Edwardian Kenilworth</h1>
                 </div>
             </div>
             {/* section 2 */}
@@ -64,7 +70,7 @@ const Detailhotel1 = () => {
                                     <p className="border border-success bg-gray-100 text-center py-1 text-blue-500 font-bold w-16 rounded-lg">5 / 5</p>
                                     <p className="font-bold ml-3 font-mono">Excellent</p>
                                     <p className="ml-2  text-blue-500">( 7 review )</p>
-                                    <p className="pl-4 text-gray-500">Califonia</p>
+                                    <p className="pl-4 text-gray-500">Virginia</p>
 
                                 </div>
                             </div>
@@ -284,4 +290,4 @@ const Detailhotel1 = () => {
     );
 };
 
-export default Detailhotel1;
+export default DetailsHotel2;

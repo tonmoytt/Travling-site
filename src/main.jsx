@@ -15,6 +15,7 @@ import About from './All Components/Root/Navbar/About/About';
 import Contact from './All Components/Root/Navbar/Contact/Contact';
 import Authinction, { AuthConnect } from './All Components/Root/Authinction/Signup/Authinction/Authinction';
 import Detailhotel1 from './All Components/Root/Navbar/Hotel/Detail hotel 1/Detailhotel1';
+import DetailsHotel2 from './All Components/Root/Navbar/Hotel/Detail hotel 1/DetailsHotel2/DetailsHotel2';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/Detail hotel 1",
         element: <Detailhotel1></Detailhotel1>
+      },
+      {
+        path: "/Detail hotel 2",
+        element: <DetailsHotel2></DetailsHotel2>
       },
       {
         path: "/signup",

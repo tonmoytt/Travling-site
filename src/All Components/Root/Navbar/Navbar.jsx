@@ -84,8 +84,8 @@ const Navbar = () => {
 
                             <ul id="submenu">
                                 <li className=" font-semibold pl-6   text-lg   pt-6" >  Detail hotel 1 </li>
-                                <li className="font-semibold pl-6   text-lg   pt-6"> Detail hotel 1 </li>
-                                <li className="font-semibold pl-6  text-lg   pt-6 "> Detail Room 2 </li>
+                                <li className="font-semibold pl-6   text-lg   pt-6"> Detail hotel 2 </li>
+                                <li className="font-semibold pl-6  text-lg   pt-6 "> Detail Room 1 </li>
                                 <li className="font-semibold pl-6   text-lg pb-3  pt-6"> Detail Room 2 </li>
                             </ul>
 
@@ -181,11 +181,11 @@ const Navbar = () => {
                         <ul id="submenu">
                             <Link to="/Detail hotel 1">   <li className=" font-semibold pl-6   text-lg pt-6 hover:text-blue-500" >  Detail hotel 1 </li>
                             </Link>
-                            <Link>
-                                <li className="font-semibold pl-6   text-lg   pt-6 hover:text-blue-500"> Detail hotel 1 </li>
+                            <Link to="/Detail hotel 2">
+                                <li className="font-semibold pl-6   text-lg   pt-6 hover:text-blue-500"> Detail hotel 2 </li>
                             </Link>
                             <Link>
-                                <li className="font-semibold pl-6  text-lg   pt-6 hover:text-blue-500"> Detail Room 2 </li>
+                                <li className="font-semibold pl-6  text-lg   pt-6 hover:text-blue-500"> Detail Room 1 </li>
 
                             </Link>
                             <Link>
