@@ -3,28 +3,119 @@
 @tailwind utilities;
 
 
-#dropdown li{
-position: relative;
+#dropdown li {
+    position: relative;
 }
-#dropmenu a{
-    transition: all 0.25s ease;
-    display: block;
-}
- 
 
-#submenu{
- z-index: 1;
-visibility: hidden;
-background-color: white;
-margin-top: 44px;
-padding-right: 80px;
-padding-left: 10px;
-padding-bottom: 10px;
-border-radius: 10px;
-position: absolute;
-}
- 
 
-li:hover ul#submenu{
+#submenu {
+    z-index: 1;
+    visibility: hidden;
+    background-color: white;
+    margin-top: 44px;
+    padding-right: 80px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+
+li:hover ul#submenu {
     visibility: visible;
 }
+
+
+/* hover to wish list */
+#dropdown div {
+    position: relative;
+}
+
+#submenu2 {
+    z-index: 1;
+    visibility: hidden;
+    background-color: white;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#dropdown:hover p#submenu2 {
+    visibility: visible;
+}
+
+
+
+/* post */
+
+#submenu3 {
+    z-index: 1;
+    visibility: hidden;
+    background-color: rgb(28, 26, 26);
+    margin-top: -260px;
+    margin-left: 233px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+#dropdown:hover p#submenu3 {
+    visibility: visible;
+}
+
+/* recomended */
+
+#submenu4 {
+    z-index: 1;
+    visibility: hidden;
+    background-color: rgb(28, 26, 26);
+    margin-top: -400px;
+    margin-left: 430px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+#dropdown:hover p#submenu4 {
+    visibility: visible;
+}
+/* recomemded copy */
+#submenu5 {
+    z-index: 1;
+    visibility: hidden;
+    background-color: rgb(28, 26, 26);
+    margin-top: -350px;
+    margin-left: 439px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+#dropdown:hover p#submenu5 {
+    visibility: visible;
+}
+
+/* recomemded copy 2 */
+#submenu6 {
+    z-index: 1;
+    visibility: hidden;
+    background-color: rgb(28, 26, 26);
+    margin-top: -413px;
+    margin-left: 437px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    position: absolute;
+}
+#dropdown:hover p#submenu6 {
+    visibility: visible;
+}
+

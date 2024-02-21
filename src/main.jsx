@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client' 
+import ReactDOM from 'react-dom/client'
 import './index.css'
 
 import {
@@ -13,35 +13,41 @@ import Wishlist from './All Components/Root/Navbar/Wishlist/Wishlist';
 import Login from './All Components/Root/Authinction/Signup/Login/Login';
 import About from './All Components/Root/Navbar/About/About';
 import Contact from './All Components/Root/Navbar/Contact/Contact';
+import Authinction, { AuthConnect } from './All Components/Root/Authinction/Signup/Authinction/Authinction';
+import Detailhotel1 from './All Components/Root/Navbar/Hotel/Detail hotel 1/Detailhotel1';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:"/",
-        element:<Home></Home>
+        path: "/",
+        element: <Home></Home>
       },
       {
-        path:"/signup",
-        element:<Signup></Signup>
+        path: "/Detail hotel 1",
+        element: <Detailhotel1></Detailhotel1>
       },
       {
-        path:"/login",
-        element:<Login></Login>
+        path: "/signup",
+        element: <Signup></Signup>
       },
       {
-        path:"/about",
-        element:<About></About>
+        path: "/login",
+        element: <Login></Login>
       },
       {
-        path:"/contact",
-        element:<Contact></Contact>
+        path: "/about",
+        element: <About></About>
       },
       {
-        path:"/Wishlist",
-        element:<Wishlist></Wishlist>
+        path: "/contact",
+        element: <Contact></Contact>
+      },
+      {
+        path: "/Wishlist",
+        element: <Wishlist></Wishlist>
       },
 
     ]
@@ -50,6 +56,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Authinction>
+      <RouterProvider router={router} />
+      </Authinction>
+
   </React.StrictMode>,
 )

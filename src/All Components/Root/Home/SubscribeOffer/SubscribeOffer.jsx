@@ -1,6 +1,7 @@
-import img from "./../../../../assets/images/subscribes images.jpg"
+import img from "./../../../../assets/images/New-TMA-Planes-8_1600-900-2.jpg"
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 
 
@@ -9,6 +10,7 @@ const SubscribeOffer = () => {
     const form = useRef();
    
     const sendEmail = (e) => {
+        // const Navigate=useNavigate('')
         e.preventDefault();
 
         emailjs.sendForm('service_c1kfic4',
@@ -17,7 +19,9 @@ const SubscribeOffer = () => {
             'Beg3h31jWVMZsIy-2')
             .then((result) => {
                 console.log(result.text);
-                swal("Successfully !", "Subscribe complete!", "success");
+                swal("Subscribe", "Complete!", "success");
+                 
+                e.target.reset()
                 
             }, (error) => {
                 console.log(error.text);

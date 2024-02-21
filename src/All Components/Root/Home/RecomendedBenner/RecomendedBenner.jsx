@@ -51,9 +51,10 @@ const RecomendedBenner = () => {
                             <div>
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
-                            <div>
+                            <div id='dropdown'>
+                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
                                 <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px]" placeholder="add to wish list" src={loveIcon} alt="" />
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
                                 </Link>
                             </div>
 
@@ -93,9 +94,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
 
                             {/* rating */}
 
@@ -136,10 +140,12 @@ const RecomendedBenner = () => {
                             <div>
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
-
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
                             {/* rating */}
 
                             <div className="mt-4 ml-5">
@@ -176,9 +182,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
                             {/* rating */}
 
                             <div className="mt-4 ml-5">
@@ -207,7 +216,6 @@ const RecomendedBenner = () => {
                 </SwiperSlide>
 
                 {/* third */}
-
                 <SwiperSlide className='mb-10'>
                     <div className=" w-full bg-base-100 gap-4 grid md:grid-cols-2">
 
@@ -220,9 +228,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
 
                             {/* rating */}
 
@@ -260,9 +271,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[545px] -mt-[380px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[540px] -mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
                             {/* rating */}
 
                             <div className="mt-4 ml-5">
@@ -303,9 +317,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[560px] -mt-[330px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu5" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[550px] -mt-[330px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
                             {/* rating */}
 
                             <div className="mt-4 ml-5">
@@ -342,9 +359,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[560px] -mt-[330px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu5" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[550px] -mt-[330px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
                             {/* rating */}
 
                             <div className="mt-4 ml-5">
@@ -386,9 +406,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[560px] -mt-[390px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu6" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[550px] -mt-[400px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
                             {/* rating */}
 
                             <div className="mt-4 ml-5">
@@ -425,9 +448,12 @@ const RecomendedBenner = () => {
                                 <img className="rounded-full h-8 w-8 absolute mx-[520px] -mt-4 " src={logo} alt="" />
                             </div>
 
-                            <Link  >
-                                <img className="rounded-full  absolute h-12 w-12 mx-[560px] -mt-[390px]" placeholder="add to wish list" src={loveIcon} alt="" />
-                            </Link>
+                            <div id='dropdown'>
+                                <p id="submenu6" className="text-sm text-red-500 border-2">Add to wishlist</p>
+                                <Link  >
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[550px] -mt-[400px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                </Link>
+                            </div>
                             {/* rating */}
 
                             <div className="mt-4 ml-5">

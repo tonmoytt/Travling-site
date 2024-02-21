@@ -21,9 +21,10 @@ const ShowPostdata = ({ data }) => {
                     <div>
                         <img className="rounded-full h-8 w-8 absolute mx-[335px] -mt-4 " src={authorImage} alt="" />
                     </div>
-                    <div>
+                    <div id="dropdown">
+                        <p id="submenu3" className="text-sm text-red-500 border-2">Add to wishlist</p>
                         <Link to={`/Wishlist/${id}`}>
-                            <img className="rounded-full h-8 w-8 absolute mx-[345px] -mt-60" placeholder="add to wish list" src={loveIcon} alt="" />
+                            <img className="rounded-full h-8 w-8 absolute mx-[345px] -mt-60 hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
                         </Link>
                     </div>
 

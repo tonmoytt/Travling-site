@@ -12,6 +12,9 @@ import img6 from "./../../../../assets/images/Bar-on-property-2-1-600x400 666.pn
 import img7 from "./../../../../assets/images/download 777.jpg"
 import img8 from "./../../../../assets/images/download 8888.jpg"
 import img9 from "./../../../../assets/images/download 999.jpg"
+import img10 from "./../../../../assets/images/login final.jpg"
+import img11 from "./../../../../assets/images/login2222222222222.jpg"
+import img12 from "./../../../../assets/images/loginfinal2.jpg"
 
 const DestinationsBenner = () => {
     return (
@@ -121,7 +124,40 @@ const DestinationsBenner = () => {
                 <SwiperSlide className='mb-10'>
                     <div className='items-center'>
                     <div className='overflow-hidden h-[300px] w-[300px] rounded-full'>
+                            <img className='h-full hover:scale-110 transition duration-300' src={img10} alt="" />
+                        </div>
+                        <div className='ml-28 mt-6'>
+                            <h2 className='text-xl font-bold'>New word city</h2>
+                            <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='mb-10'>
+                    <div className='items-center'>
+                    <div className='overflow-hidden h-[300px] w-[300px] rounded-full'>
                             <img className='h-full hover:scale-110 transition duration-300' src={img9} alt="" />
+                        </div>
+                        <div className='ml-28 mt-6'>
+                            <h2 className='text-xl font-bold'>New word city</h2>
+                            <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='mb-10'>
+                    <div className='items-center'>
+                    <div className='overflow-hidden h-[300px] w-[300px] rounded-full'>
+                            <img className='h-full hover:scale-110 transition duration-300' src={img11} alt="" />
+                        </div>
+                        <div className='ml-28 mt-6'>
+                            <h2 className='text-xl font-bold'>New word city</h2>
+                            <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='mb-10'>
+                    <div className='items-center'>
+                    <div className='overflow-hidden h-[300px] w-[300px] rounded-full'>
+                            <img className='h-full hover:scale-110 transition duration-300' src={img12} alt="" />
                         </div>
                         <div className='ml-28 mt-6'>
                             <h2 className='text-xl font-bold'>New word city</h2>
