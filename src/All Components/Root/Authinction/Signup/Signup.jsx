@@ -79,12 +79,12 @@ const Signup = () => {
             <div>
 
                 <div className="  bg-base-200">
-                    <div className=" flex justify-between  flex-col lg:flex-row">
+                <div className=" mt-4 flex justify-between  flex-col md:flex-row lg:flex-row">
 
-                        <img className="h-[500px] w-[700px] rounded-r-lg rounded-sm" src={img} />
+                    <img className="h-[250px] md:h-[500px] lg:h-[500px] w-full md:w-1/3 lg:w-[700px] rounded-r-lg rounded-sm" src={img} />
 
                         <div>
-                            <div className="pr-2 md:pr-10 ">
+                            <div className="px-5 ">
                                 <div className="mt-10 mb-8">
                                     <h1 className="text-2xl text-green-600 font-bold mb-1 uppercase">
                                         <span className="text-red-300">for</span>
@@ -94,7 +94,7 @@ const Signup = () => {
 
                                 {/* first */}
                                 <form onSubmit={HendelSignUp}>
-                                    <div className="flex gap-7">
+                                    <div className="grid md:grid-cols-2 gap-7">
 
 
                                         <div className="form-control">
@@ -117,7 +117,7 @@ const Signup = () => {
 
                                     </div>
 
-                                    <div className="flex gap-7">
+                                    <div className="grid md:grid-cols-2 gap-7">
 
 
                                         <div className="form-control">

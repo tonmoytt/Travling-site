@@ -22,9 +22,9 @@ const About = () => {
 
     return (
         <div>
-            <img className='h-[500px] w-[1220px] mx-6 rounded-3xl' src={img} alt="" />
+            <img className='h-full w-full lg:mx-6 mt-4 rounded-3xl' src={img} alt="" />
 
-            <div className='pl-32 mt-16 pb-10'>
+            <div className='pl-6 md:pl-32 mt-16 pb-10'>
                 <h1 className='text-4xl font-bold'>About the company</h1>
                 <p className='py-10'>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, cons, adipisci velit, sed quia non numquam eius modi ullma tempora incidunt ut labore et dolore magnam aliquam quaerat fruitr voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem. Itaque earum rerum hic tea sapiente delectus, ut aut reiciendis voluptatibus.</p>
 
