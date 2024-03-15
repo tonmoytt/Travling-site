@@ -79,7 +79,7 @@ const DestinationsBenner = () => {
                 </SwiperSlide>
                 <SwiperSlide className='mb-10'>
                     <div className='items-center'>
-                    <div className='overflow-hidden h-[100px] md:h-[220px] lg:h-[300px] w-[100px] md:w-[220px] lg:w-[300px]] rounded-full'>
+                    <div className='overflow-hidden h-[100px] md:h-[220px] lg:h-[300px] w-[100px] md:w-[220px] lg:w-[300px] rounded-full'>
                             <img className='h-full hover:scale-110 transition duration-300' src={img5} alt="" />
                         </div>
                         <div className='ml-10 md:ml-16 lg:ml-28 mt-2 md:mt-4 lg:mt-6'>
