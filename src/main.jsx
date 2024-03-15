@@ -19,6 +19,7 @@ import DetailsHotel2 from './All Components/Root/Navbar/Hotel/Detail hotel 1/Det
 import HotelWBFHommachi from './All Components/Root/Navbar/Room/Hotel wft/HotelWBFHommachi';
 import Room1 from './All Components/Root/Navbar/Room/Room1';
 import Room2 from './All Components/Root/Navbar/Room/Room2/Room2';
+import PriverRoute from './All Components/Root/Authinction/Signup/PriverRoute/PriverRoute';
 
 const router = createBrowserRouter([
   {
@@ -67,7 +68,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Wishlist",
-        element: <Wishlist></Wishlist>
+        element: <PriverRoute><Wishlist></Wishlist></PriverRoute> 
       },
 
     ]

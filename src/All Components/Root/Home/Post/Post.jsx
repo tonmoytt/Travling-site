@@ -14,8 +14,8 @@ const Post = () => {
     },[])
     return (
         <div className="py-8 md:py-20 bg-gray-50">
-               <p className="text-4xl font-bold text-center pb-16">Plan your next staycation</p> 
-               <div className="grid md:grid-cols-3 gap-4  mx-6">
+               <p className="text-4xl font-bold text-center pb-16">Plan your next stay cation</p> 
+               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6 lg:gap-6  mx-2 md:mx-6">
                 {
                     data.map(data => <ShowPostdata key={data.id} data={data} ></ShowPostdata>)
                 }

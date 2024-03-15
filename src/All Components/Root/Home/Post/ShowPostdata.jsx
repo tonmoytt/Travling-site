@@ -11,7 +11,7 @@ const ShowPostdata = ({ data }) => {
         <div className="mb-10">
 
 
-            <div className="card card-compact w-[390px] bg-base-100 shadow-xl">
+            <div className="card card-compact md:w-[350px] bg-base-100 shadow-xl">
 
                 <div>
                     {/* image */}
@@ -19,12 +19,12 @@ const ShowPostdata = ({ data }) => {
                         <img className="rounded-t-xl relative hover:scale-110 transition duration-700" src={image} alt="" />
                     </div>
                     <div>
-                        <img className="rounded-full h-8 w-8 absolute mx-[335px] -mt-4 " src={authorImage} alt="" />
+                        <img className="rounded-full h-8 w-8 absolute  mx-[250px] md:mx-[300px] lg:mx-[335px] -mt-4 " src={authorImage} alt="" />
                     </div>
                     <div id="dropdown">
                         <p id="submenu3" className="text-sm text-red-500 border-2">Add to wishlist</p>
                         <Link to={`/Wishlist/${id}`}>
-                            <img className="rounded-full h-8 w-8 absolute mx-[345px] -mt-60 hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                            <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[300px] lg:mx-[345px] -mt-48 md:-mt-[220px] lg:-mt-60 hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
                         </Link>
                     </div>
 

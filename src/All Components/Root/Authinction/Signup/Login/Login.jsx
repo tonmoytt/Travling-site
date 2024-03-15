@@ -1,14 +1,17 @@
 import { Link, useNavigate } from "react-router-dom";
 
-import img from "./../../../../../assets/images/login2222222222222.jpg"
-import { useContext,  } from "react";
+import img from "./../../../../../assets/images/ttttttttttttttttt.webp"
+import { useContext, } from "react";
 import { AuthConnect } from "../Authinction/Authinction";
 import swal from "sweetalert";
 
 const Login = () => {
     const { Login } = useContext(AuthConnect)
 
-const Navigate=useNavigate()
+
+    const Navigate = useNavigate()
+    const from = location.state?.from?.pathname || "/"
+
     const handleLogin = event => {
         event.preventDefault()
         const form = event.target;
@@ -22,7 +25,7 @@ const Navigate=useNavigate()
                 console.log(result.user);
                 swal("Success!", "Successfully", "success");
                 event.target.reset()
-                Navigate('/')
+                Navigate(from, { replace: true });
             })
             .catch(error => {
                 console.error(error);
@@ -39,7 +42,7 @@ const Navigate=useNavigate()
                 <div className="pr-2 md:pr-10 ">
                     <div className="mt-14 mb-8">
                         <h1 className="text-2xl text-green-600 font-bold mb-4 uppercase">
-                        TRAVLEWRP</h1>
+                            TRAVLEWRP</h1>
 
                         <div className="flex justify-between">
                             <h1 className="text-2xl text-black font-sans font-semibold">Login now</h1>

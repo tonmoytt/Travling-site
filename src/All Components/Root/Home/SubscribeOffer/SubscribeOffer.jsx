@@ -30,10 +30,10 @@ const SubscribeOffer = () => {
 
 
     return (
-        <div className="flex border mx-10 rounded-xl">
+        <div className="grid md:flex border mx-10 rounded-xl">
 
-            <div className="w-1/2">
-                <img className="w-full rounded-l-xl h-[300px]" src={img} alt="" />
+            <div className="md:w-9/12 w-1/2">
+                <img className="w-full rounded-l-xl h-full" src={img} alt="" />
             </div>
             <div className="">
                 <h1 className="text-4xl text-center mt-12 font-bold">Get special offers, and more   from Traveler</h1>

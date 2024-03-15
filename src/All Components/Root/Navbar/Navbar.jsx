@@ -42,7 +42,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar bg-base-100">
-            <div className="navbar-start mx-4">
+            <div className="navbar-start mx-0 md:mx-4">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -239,16 +239,17 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex  ">
-                 
-                <div className="pr-6">
-                    <Link to="/Wishlist"><img className="h-8 w-8" src={img2} alt="" /></Link>
+
+                <div className="pr-4 md:pr-6">
+                    <Link to="/Wishlist">
+                        <img className="h-7 md:h-8 w-7 md:w-8" src={img2} alt="" /></Link>
                 </div>
 
                 {
                     user ? <>
                         <div>
                             <button onClick={Hendlelogout}>
-                                <img className="h-14 w-14   rounded-full" src={img3} alt="" />
+                                <img className="h-10 md:h-14 w-10 md:w-14   rounded-full" src={img3} alt="" />
                             </button>
 
                         </div>
