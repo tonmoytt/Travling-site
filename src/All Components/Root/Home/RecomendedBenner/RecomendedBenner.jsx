@@ -49,7 +49,7 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
                             <div id='dropdown'>
                                 <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
@@ -91,7 +91,7 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image1} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
 
                             <div id='dropdown'>
@@ -138,7 +138,7 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image2} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
                             <div id='dropdown'>
                                 <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
@@ -179,7 +179,7 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image3} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
 
                             <div id='dropdown'>
@@ -225,7 +225,7 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image4} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
 
                             <div id='dropdown'>
@@ -268,7 +268,7 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image5} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
 
                             <div id='dropdown'>
@@ -314,13 +314,13 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl w-full hover:scale-110 transition duration-300 relative" src={image6} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[550px] -mt-4 " src={logo} alt="" />
                             </div>
 
                             <div id='dropdown'>
                                 <p id="submenu5" className="text-sm text-red-500 border-2">Add to wishlist</p>
                                 <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[170px] md:-mt-[210px] lg:-mt-[380px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[170px] md:-mt-[210px] lg:-mt-[340px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
                                 </Link>
                             </div>
                             {/* rating */}
@@ -353,16 +353,16 @@ const RecomendedBenner = () => {
                         <div className='card card-compact shadow-xl'>
                             {/* image */}
                             <div className='overflow-hidden'>
-                                <img className="rounded-t-xl w-full h-[215px] hover:scale-110 transition duration-300 relative" src={image7} alt="" />
+                                <img className="rounded-t-xl w-full h-[215px] md:h-[350px] hover:scale-110 transition duration-300 relative" src={image7} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
 
                             <div id='dropdown'>
                                 <p id="submenu5" className="text-sm text-red-500 border-2">Add to wishlist</p>
                                 <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[210px] lg:-mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[210px] lg:-mt-[340px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
                                 </Link>
                             </div>
                             {/* rating */}
@@ -403,13 +403,13 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl w-full hover:scale-110 transition duration-300 relative" src={image8} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
 
                             <div id='dropdown'>
                                 <p id="submenu6" className="text-sm text-red-500 border-2">Add to wishlist</p>
                                 <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[550px] -mt-[200px] md:-mt-[240px] lg:-mt-[400px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
                                 </Link>
                             </div>
                             {/* rating */}
@@ -445,14 +445,14 @@ const RecomendedBenner = () => {
                                 <img className="rounded-t-xl w-full hover:scale-110 transition duration-300 relative" src={image9} alt="" />
                             </div>
                             <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[520px] -mt-4 " src={logo} alt="" />
+                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
                             </div>
                              
 
                             <div id='dropdown'>
                                 <p id="submenu6" className="text-sm text-red-500 border-2">Add to wishlist</p>
                                 <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
+                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[550px] -mt-[200px] md:-mt-[240px] lg:-mt-[400px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
                                 </Link>
                             </div>
                             {/* rating */}

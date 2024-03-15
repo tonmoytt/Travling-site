@@ -32,7 +32,7 @@ const SubscribeOffer = () => {
     return (
         <div className="grid md:flex border mx-10 rounded-xl">
 
-            <div className="md:w-9/12 w-1/2">
+            <div className="w-full md:w-9/12 lg:w-1/2">
                 <img className="w-full rounded-l-xl h-full" src={img} alt="" />
             </div>
             <div className="">
