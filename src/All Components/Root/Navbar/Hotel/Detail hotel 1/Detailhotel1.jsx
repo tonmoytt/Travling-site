@@ -25,7 +25,7 @@ const Detailhotel1 = () => {
                 <div className="flex gap-x-10 pl-6 ">
                     <Link to="/"> <h1 className=" font-semibold">Home</h1></Link>
                     <Link to="/unitedstate"> <h1 className=" font-semibold">United State</h1></Link>
-                    <h1 className=" text-gray-500">Studio Allston Hotel</h1>
+                    <h1 className=" text-gray-500"> The Studio Allston Hotel </h1>
                 </div>
             </div>
             {/* section 2 */}

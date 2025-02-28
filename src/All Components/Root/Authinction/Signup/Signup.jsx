@@ -156,13 +156,15 @@ const Signup = () => {
 
                                 </form>
 
-
-                            </div>
-                            <div className='bg-red-200 w-[480px] rounded-xl'>
+                                {/* password */}
+                                <div className='bg-red-200 w-[480px] rounded-xl'>
                                 {
                                     password && <p className='mt-4   rounded-2xl py-2 font-semibold text-center text-2xl '> {password}</p>
                                 }
                             </div>
+
+                            </div>
+                           
                         </div>
 
                     </div>
