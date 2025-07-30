@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <div className="">
       <div>
-        <div className="hero md:h-[370px] lg:h-[400px] " style={{ backgroundImage: 'url(https://cdn.blastness.info/media/389/colonnaresort-top/thumbs/full/iti_colonnaresort_esterni3_top.jpg)' }}>
+        <div className="hero  md:h-[370px] lg:h-[640px] " style={{ backgroundImage: 'url(https://cdn.blastness.info/media/389/colonnaresort-top/thumbs/full/iti_colonnaresort_esterni3_top.jpg)' }}>
           <div className="hero-overlay bg-opacity-20"></div>
 
 

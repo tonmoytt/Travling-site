@@ -35,7 +35,7 @@ const Authinction = ({children}) => {
 
     }, [])
 
-   const Authinfo={CreateUser,Login,createGoogle,logout,loading,user }
+   const Authinfo={ CreateUser,Login,createGoogle,logout,loading,user }
     return (
         <AuthConnect.Provider value={Authinfo}>
         {children}

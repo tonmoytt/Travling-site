@@ -20,6 +20,7 @@ import HotelWBFHommachi from './All Components/Root/Navbar/Room/Hotel wft/HotelW
 import Room1 from './All Components/Root/Navbar/Room/Room1';
 import Room2 from './All Components/Root/Navbar/Room/Room2/Room2';
 import PriverRoute from './All Components/Root/Authinction/Signup/PriverRoute/PriverRoute';
+import WishlistProvider from './All Components/Root/Navbar/Wishlist/Wishlist provider/WishlistProvider';
 
 const router = createBrowserRouter([
   {
@@ -68,7 +69,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Wishlist",
-        element: <PriverRoute><Wishlist></Wishlist></PriverRoute> 
+        element: <PriverRoute><Wishlist></Wishlist></PriverRoute>
       },
 
     ]
@@ -77,9 +78,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Authinction>
-      <RouterProvider router={router} />
-      </Authinction>
-
-  </React.StrictMode>,
+    <Authinction> {/* ✅ AuthConnect.Provider wrapper */}
+      <WishlistProvider> {/* ✅ WishlistProvider inside Auth provider */}
+        <RouterProvider router={router} />
+      </WishlistProvider>
+    </Authinction>
+  </React.StrictMode>
 )

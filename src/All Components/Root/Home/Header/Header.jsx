@@ -4,7 +4,7 @@ import { FaInstagram, FaTwitterSquare, FaYoutube } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <div className="hidden md:block">
+        <div className="hidden md:block mt-10 mx-20 rounded-lg">
             <div className="  bg-gray-900 items-center text-sm text-gray-400 flex  justify-between ">
 
 

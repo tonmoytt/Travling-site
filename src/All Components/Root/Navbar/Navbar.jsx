@@ -4,13 +4,16 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import img from "./../../../assets/images/t logo.svg"
 import img1 from "./../../../assets/images/download.png"
-import img2 from "./../../../assets/images/download (1).png"
+import img2 from "./../../../assets/images/download__1_-removebg-preview.png"
 import img3 from "./../../../assets/images/outbal.webp"
 import { useContext } from "react";
 import { AuthConnect } from "../Authinction/Signup/Authinction/Authinction";
 import Swal from "sweetalert2";
+import { WishlistContext } from "./Wishlist/Wishlist provider/WishlistProvider";
 const Navbar = () => {
     const { user, logout } = useContext(AuthConnect)
+    const { wishlist } = useContext(WishlistContext);
+    console.log("wishlist count", wishlist);
     const Navigate = useNavigate()
     const Hendlelogout = () => {
 
@@ -40,8 +43,9 @@ const Navbar = () => {
 
     }
 
+
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar fixed z-10 bg-base-100 bg-opacity-80 backdrop-blur-md shadow-md">
             <div className="navbar-start mx-0 md:mx-4">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -240,9 +244,17 @@ const Navbar = () => {
             </div>
             <div className="navbar-end flex  ">
 
-                <div className="pr-4 md:pr-6">
+                <div className="relative pr-4 md:pr-6">
                     <Link to="/Wishlist">
-                        <img className="h-7 md:h-8 w-7 md:w-8" src={img2} alt="" /></Link>
+                        <img className="h-7 md:h-10 w-7 md:w-10" src={img2} alt="wishlist icon" />
+                        {
+                            wishlist.length > 0 && (
+                                <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-bounce">
+                                    {wishlist.length}
+                                </span>
+                            )
+                        }
+                    </Link>
                 </div>
 
                 {
