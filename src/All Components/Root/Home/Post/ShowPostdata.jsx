@@ -22,7 +22,7 @@ const ShowPostdata = ({ data }) => {
         };
 
         try {
-            const res = await axios.post("https://travling-server-site.vercel.app/wishlist", wishlistData);
+            const res = await axios.post("http://localhost:5000/wishlist", wishlistData);
             if (res.data.insertedId || res.status === 200) {
                 Swal.fire({
                     icon: "success",
@@ -42,11 +42,11 @@ const ShowPostdata = ({ data }) => {
 
     return (
         <div className="mb-10">
-            <div className="card card-compact md:w-[350px] bg-base-100 shadow-xl">
+            <div className="card card-compact w-full bg-base-100 shadow-xl">
                 <div>
                     {/* image */}
                     <div className="overflow-hidden">
-                        <img className="rounded-t-xl relative hover:scale-110 transition duration-700" src={image} alt="" />
+                        <img className="rounded-t-xl relative hover:scale-110 transition duration-700 h-72 w-full " src={image} alt="" />
                     </div>
 
                     {/* author image */}
@@ -58,12 +58,12 @@ const ShowPostdata = ({ data }) => {
                     <div id="dropdown">
                         <p id="submenu3" className="text-sm text-red-500 border-2">Add to wishlist</p>
                         <button onClick={handleAddToWishlist}>
-                            <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[300px] lg:mx-[305px] -mt-48 md:-mt-[220px] lg:-mt-[230px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="Add to Wishlist" />
+                            <img className="rounded-full h-10 w-10 absolute mx-[280px] md:mx-[370px] lg:mx-[380px] -mt-[220px] md:-mt-[270px] lg:-mt-[280px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="Add to Wishlist" />
                         </button>
                     </div>
 
                     {/* rating */}
-                    <div className="mt-4 ml-5">
+                    <div className="mt-4 ml-5 ">
                         <p>rating star</p>
                     </div>
 
@@ -76,7 +76,7 @@ const ShowPostdata = ({ data }) => {
                     {/* others */}
                     <div className="border-t-2 mt-6 ml-5">
                         <div className="flex items-center mt-6">
-                            <p className="border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">{rating2}</p>
+                            <p className="border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-[70px] rounded-lg">{rating2}</p>
                             <p className="font-bold ml-3 font-mono">Excellent</p>
                             <p className="ml-2">({rating} review)</p>
                         </div>

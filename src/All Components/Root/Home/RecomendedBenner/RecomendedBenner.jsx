@@ -1,27 +1,66 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useEffect, useState, } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import axios from 'axios';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import loveIcon from "../../../../assets/images/bal-removebg-preview.png";
+// import { AuthContext } from '../../Authinction/'; // adjust path as needed
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AuthConnect } from '../../Authinction/Signup/Authinction/Authinction';
+import Swal from 'sweetalert2';
 
-import logo from "./../../../../assets/images/man.jpg"
-import loveIcon from "./../../../../assets/images/bal-removebg-preview.png"
+const RecommendedBanner = () => {
+    const [recommendcard, setRecommendedCards] = useState([]);
+    const { user } = useContext(AuthConnect);
 
-import image from "./../../../../assets/images/feature-11-600x400 111.png"
-import image1 from "./../../../../assets/images/feature-21-600x400 222.png"
-import image2 from "./../../../../assets/images/feature-1-2-600x400 333.png"
-import image3 from "./../../../../assets/images/feature-20-600x400  444.png"
-import image4 from "./../../../../assets/images/feature-19-600x400 5555.png"
-import image5 from "./../../../../assets/images/Bar-on-property-2-1-600x400 666.png"
-import image6 from "./../../../../assets/images/download 777.jpg"
-import image7 from "./../../../../assets/images/download 8888.jpg"
-import image8 from "./../../../../assets/images/download 999.jpg"
-import image9 from "./../../../../assets/images/download 1000.jpg"
-import { Link } from 'react-router-dom';
+    useEffect(() => {
+        fetch("/Hoteldata.json")
+            .then(res => res.json())
+            .then(data => {
+                const recommended = data.filter(item => item.category === "recommended");
+                setRecommendedCards(recommended);
+            });
+    }, []);
 
+    const chunked = [];
+    for (let i = 0; i < recommendcard.length; i += 2) {
+        chunked.push(recommendcard.slice(i, i + 2));
+    }
 
-const RecomendedBenner = () => {
+    const handleAddToWishlist = async (card) => {
+        if (!user?.email) {
+            toast.warning("Please login to add to wishlist");
+            return;
+        }
+
+        const wishlistData = {
+            hotelId: card.id,
+            name: card.name,
+            price: card.price,
+            image: card.image,
+            email: user.email,
+        };
+        console.log("🚀 Sending to backend:", wishlistData);
+        try {
+            const res = await axios.post('http://localhost:5000/wishlist-recommend', wishlistData);
+            if (res.data?.insertedId) {
+                Swal.fire({
+                    icon: "success",
+                    title: "Added to Wishlist!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                alert('Already in wishlist');
+            }
+        } catch (err) {
+            console.error(err);
+            toast.error('Something went wrong.');
+        }
+    };
 
     return (
         <div className='my-16'>
@@ -29,462 +68,70 @@ const RecomendedBenner = () => {
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
             >
-                <SwiperSlide className='mb-10'>
-                    <div className=" w-full bg-base-100 gap-4 grid md:grid-cols-2">
+                {chunked.map((recommendcard, index) => (
+                    <SwiperSlide key={index} className='mb-10'>
+                        <div className="w-full bg-base-100 gap-4 grid md:grid-cols-2">
+                            {recommendcard.map(card => (
+                                <div key={card.id} className='card card-compact shadow-xl relative'>
+                                    <div className='overflow-hidden'>
+                                        <img
+                                            className="rounded-t-xl hover:scale-110 transition duration-300 h-[380px] w-full"
+                                            src={card.image}
+                                            alt={card.name}
+                                        />
+                                    </div>
+                                    <div>
+                                        <img
+                                            className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[640px] -mt-4"
+                                            src={card.authorImage}
+                                            alt="author"
+                                        />
+                                    </div>
 
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-                            <div id='dropdown'>
-                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
+                                    {/* Wishlist Button */}
+                                    <div className="relative group">
+                                        <button onClick={() => handleAddToWishlist(card)}>
+                                            <img
+                                                className="rounded-full absolute h-8 w-8 mx-[260px] md:mx-[320px] lg:mx-[640px] -mt-[200px] md:-mt-[240px] lg:-mt-[350px] bg-red-50"
+                                                src={loveIcon}
+                                                alt="wishlist"
+                                            />
+                                        </button>
+                                        <p className="hidden group-hover:block absolute text-xs md:text-sm bg-black text-white px-2 py-1 rounded -top-10 right-0 md:-top-[380px] md:right-1">
+                                            Add to wishlist
+                                        </p>
+                                    </div>
 
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">Agoda</p>
-                                <p className="text-gray-600 mt-2">New York, NY</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">5 / 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(5 review)</p>
-
+                                    <div className="ml-5">
+                                        <p className="text-lg font-bold mt-2">{card.name}</p>
+                                        <p className="text-gray-600 mt-2">{card.location}</p>
+                                    </div>
+                                    <div className="border-t-2 mt-3 ml-5">
+                                        <div className="flex items-center mt-6">
+                                            <p className="border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-18 rounded-lg">{card.rating}</p>
+                                            <p className="font-bold ml-3 font-mono">Excellent</p>
+                                            <p className="ml-2">(5 review)</p>
+                                        </div>
+                                    </div>
+                                    <p className="mt-2 ml-5 pb-5">
+                                        <span className="text-gray-600 text-sm">From : </span>
+                                        <span className="text-lg font-bold">{card.price}</span>
+                                        <span className="text-base text-gray-500">/night</span>
+                                    </p>
                                 </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$200</span><span className="text-base text-gray-500">/night</span></p>
-
+                            ))}
                         </div>
-
-
-                        {/* second */}
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image1} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-
-                            <div id='dropdown'>
-                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">OneFineStay</p>
-                                <p className="text-gray-600 mt-2">Los Angeles, CA</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">4.9/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(5 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$180</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* second */}
-                <SwiperSlide className='mb-10'>
-                    <div className=" w-full bg-base-100 gap-4 grid md:grid-cols-2">
-
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image2} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-                            <div id='dropdown'>
-                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">OneFineStay</p>
-                                <p className="text-gray-600 mt-2">Los Angeles, CA</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">4.9/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(5 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$180</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-
-
-                        {/* second */}
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image3} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-
-                            <div id='dropdown'>
-                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">Hotel Expedia</p>
-                                <p className="text-gray-600 mt-2">Chicago, IL</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">5/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(4 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$220</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* third */}
-                <SwiperSlide className='mb-10'>
-                    <div className=" w-full bg-base-100 gap-4 grid md:grid-cols-2">
-
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image4} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-
-                            <div id='dropdown'>
-                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">Hotel Expedia</p>
-                                <p className="text-gray-600 mt-2">Chicago, IL</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">5/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(4 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$220</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-
-
-                        {/* second */}
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl hover:scale-110 transition duration-300 relative" src={image5} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-
-                            <div id='dropdown'>
-                                <p id="submenu4" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[240px] lg:-mt-[380px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">Priceline</p>
-                                <p className="text-gray-600 mt-2">Miami, FL</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">4.7/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(7 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$250</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-                {/* four */}
-
-                <SwiperSlide className='mb-10'>
-                    <div className=" w-full bg-base-100 gap-4 grid md:grid-cols-2">
-
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl w-full hover:scale-110 transition duration-300 relative" src={image6} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[550px] -mt-4 " src={logo} alt="" />
-                            </div>
-
-                            <div id='dropdown'>
-                                <p id="submenu5" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[170px] md:-mt-[210px] lg:-mt-[340px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">Agoda</p>
-                                <p className="text-gray-600 mt-2">New York, NY</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">5 / 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(5 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$200</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-
-
-                        {/* second */}
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl w-full h-[215px] md:h-[350px] hover:scale-110 transition duration-300 relative" src={image7} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-
-                            <div id='dropdown'>
-                                <p id="submenu5" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[540px] -mt-[200px] md:-mt-[210px] lg:-mt-[340px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">OneFineStay</p>
-                                <p className="text-gray-600 mt-2">Los Angeles, CA</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">4.9/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(5 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$180</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                {/* five */}
-
-                <SwiperSlide className='mb-10'>
-                    <div className=" w-full bg-base-100 gap-4 grid md:grid-cols-2">
-
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl w-full hover:scale-110 transition duration-300 relative" src={image8} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-
-                            <div id='dropdown'>
-                                <p id="submenu6" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[550px] -mt-[200px] md:-mt-[240px] lg:-mt-[400px]  hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">OneFineStay</p>
-                                <p className="text-gray-600 mt-2">Los Angeles, CA</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">4.9/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(5 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$180</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-
-
-                        {/* second */}
-                        <div className='card card-compact shadow-xl'>
-                            {/* image */}
-                            <div className='overflow-hidden'>
-                                <img className="rounded-t-xl w-full hover:scale-110 transition duration-300 relative" src={image9} alt="" />
-                            </div>
-                            <div>
-                                <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[320px] lg:mx-[545px] -mt-4 " src={logo} alt="" />
-                            </div>
-                             
-
-                            <div id='dropdown'>
-                                <p id="submenu6" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                                <Link  >
-                                    <img className="rounded-full  absolute h-12 w-12 mx-[260px] md:mx-[320px] lg:mx-[550px] -mt-[200px] md:-mt-[240px] lg:-mt-[400px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="" />
-                                </Link>
-                            </div>
-                            {/* rating */}
-
-                            <div className="mt-4 ml-5">
-                                <p>rating star</p>
-                            </div>
-                            {/* name location */}
-
-                            <div className="ml-5">
-                                <p className="text-lg font-bold mt-2">Hotel Expedia</p>
-                                <p className="text-gray-600 mt-2">Chicago, IL</p>
-
-                            </div>
-                            {/* others */}
-                            <div className="border-t-2 mt-6 ml-5">
-                                <div className="flex items-center mt-6" >
-                                    <p className="  border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-16 rounded-lg">5/ 5</p>
-                                    <p className="font-bold ml-3 font-mono">Excellent</p>
-                                    <p className="ml-2">(4 review)</p>
-
-                                </div>
-                            </div>
-                            <p className="mt-2 ml-5 pb-5"> <span className="text-gray-600 text-sm">From : </span> <span className="text-lg font-bold">$220</span><span className="text-base text-gray-500">/night</span></p>
-
-                        </div>
-                    </div>
-                </SwiperSlide>
-
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );
 };
 
-export default RecomendedBenner;
+export default RecommendedBanner;

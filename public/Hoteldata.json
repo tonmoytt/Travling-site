@@ -1,44 +1,282 @@
-  [
-      {
-        "id": 1,
-        "image": "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
-        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
-        "name": "Agoda",
-        "location": "New York, NY",
-        "rating": 5,
-        "rating2": "5 / 5",
-        "price": "$200"
-      },
-      {
-        "id": 2,
-        "image": "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
-        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
-        "name": "OneFineStay",
-        "location": "Los Angeles, CA",
-        "rating": 5,
-        "rating2": "4.9/ 5",
-        "price": "$180"
-      },
-      {
-        "id": 3,
-        "image": "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
-        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
-        "name": "Hotel Expedia",
-        "location": "Chicago, IL",
-        "rating": 5,
-        "rating2":  "5 / 5",
-        "price": "$220"
-      },
-      {
-        "id": 4,
-        "image": "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
-        "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
-        "name": "Priceline",
-        "location": "Miami, FL",
-        "rating": 4,
-        "rating2": "4.6/ 5",
-        "price": "$250"
-      }
-    ]
-  
-  
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Agoda",
+    "location": "New York, NY",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$200"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "OneFineStay",
+    "location": "Los Angeles, CA",
+    "rating": 5,
+    "rating2": "4.9/ 5",
+    "price": "$180"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Hotel Expedia",
+    "location": "Chicago, IL",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$220"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Priceline",
+    "location": "Miami, FL",
+    "rating": 4,
+    "rating2": "4.6/ 5",
+    "price": "$250"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Booking.com",
+    "location": "San Francisco, CA",
+    "rating": 4,
+    "rating2": "4.8 / 5",
+    "price": "$190"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Trivago",
+    "location": "Seattle, WA",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$210"
+  },
+  {
+    "id": 7,
+    "image": "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Orbitz",
+    "location": "Dallas, TX",
+    "rating": 4,
+    "rating2": "4.7 / 5",
+    "price": "$230"
+  },
+  {
+    "id": 8,
+    "image": "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Travelocity",
+    "location": "Boston, MA",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$240"
+  },
+  {
+    "id": 9,
+    "image": "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Hotels.com",
+    "location": "Denver, CO",
+    "rating": 4,
+    "rating2": "4.5 / 5",
+    "price": "$185"
+  },
+  {
+    "id": 10,
+    "image": "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Expedia Plus",
+    "location": "Atlanta, GA",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$260"
+  },
+  {
+    "id": 11,
+    "image": "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Luxury Stay",
+    "location": "Las Vegas, NV",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$300"
+  },
+  {
+    "id": 12,
+    "image": "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Urban Escape",
+    "location": "Austin, TX",
+    "rating": 4,
+    "rating2": "4.4 / 5",
+    "price": "$175"
+  },
+  {
+    "id": 13,
+    "image": "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Nature Nest",
+    "location": "Portland, OR",
+    "rating": 5,
+    "rating2": "4.9 / 5",
+    "price": "$195"
+  },
+  {
+    "id": 14,
+    "image": "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Sea Breeze",
+    "location": "San Diego, CA",
+    "rating": 4,
+    "rating2": "4.6 / 5",
+    "price": "$210"
+  },
+  {
+    "id": 15,
+    "image": "https://i.ibb.co/dNm9Z56/Orbitz.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Mountain View",
+    "location": "Salt Lake City, UT",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$220"
+  },
+  {
+    "id": 16,
+    "image": "https://i.ibb.co/Tqw1cPHw/restaurant-table-interior-modern-wallpaper-preview.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Cozy Cabin",
+    "location": "Anchorage, AK",
+    "rating": 4,
+    "rating2": "4.3 / 5",
+    "price": "$160"
+  },
+  {
+    "id": 17,
+    "image": "https://i.ibb.co/3mfSM2Zr/Sea-Breeze.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Beach Paradise",
+    "location": "Tampa, FL",
+    "rating": 5,
+    "rating2": "4.9 / 5",
+    "price": "$270"
+  },
+  {
+    "id": 18,
+    "image": "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Downtown Inn",
+    "location": "Philadelphia, PA",
+    "rating": 4,
+    "rating2": "4.5 / 5",
+    "price": "$200"
+  },
+  {
+    "id": 19,
+    "image": "https://i.ibb.co/C5MCN0D5/Travelocit.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Sunset Villa",
+    "location": "Phoenix, AZ",
+    "rating": 5,
+    "rating2": "5 / 5",
+    "price": "$290"
+  },
+  {
+    "id": 20,
+    "image": "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "City Lodge",
+    "location": "Charlotte, NC",
+    "rating": 4,
+    "rating2": "4.6 / 5",
+    "price": "$185"
+  },
+  {
+    "id": 21,
+    "image": "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Agoda",
+    "location": "New York, NY",
+    "rating": "5 / 5",
+    "price": "$200",
+    "category": "recommended"
+  },
+  {
+    "id": 22,
+    "image": "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "OneFineStay",
+    "location": "Los Angeles, CA",
+    "rating": "4.9 / 5",
+    "price": "$180",
+    "category": "recommended"
+  },
+  {
+    "id": 23,
+    "image": "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Hotel Expedia",
+    "location": "Chicago, IL",
+    "rating": "5 / 5",
+    "price": "$220",
+    "category": "recommended"
+  },
+  {
+    "id": 24,
+    "image": "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Priceline",
+    "location": "Miami, FL",
+    "rating": "4.7 / 5",
+    "price": "$250",
+    "category": "recommended"
+  },
+  {
+    "id": 25,
+    "image": "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Priceline",
+    "location": "Miami, FL",
+    "rating": "4.7 / 5",
+    "price": "$250",
+    "category": "recommended"
+  },
+  {
+    "id": 26,
+    "image": "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Agoda",
+    "location": "New York, NY",
+    "rating": "5 / 5",
+    "price": "$200",
+    "category": "recommended"
+  },
+  {
+    "id": 27,
+    "image": "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "OneFineStay",
+    "location": "Los Angeles, CA",
+    "rating": "4.9 / 5",
+    "price": "$180",
+    "category": "recommended"
+  },
+  {
+    "id": 28,
+    "image": "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+    "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
+    "name": "Hotel Expedia",
+    "location": "Chicago, IL",
+    "rating": "5 / 5",
+    "price": "$220",
+    "category": "recommended"
+  }
+]
