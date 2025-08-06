@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 
 import img from "./../../../assets/images/t logo.svg"
-import img1 from "./../../../assets/images/download.png"
+import img1 from "./../../../assets/images/user.png"
 import img2 from "./../../../assets/images/download__1_-removebg-preview.png"
 import img3 from "./../../../assets/images/outbal.webp"
 import { useContext } from "react";
@@ -269,7 +269,7 @@ const Navbar = () => {
                         :
                         <>
                             <div>
-                                <Link to="/signup"><img className="h-14 w-14" src={img1} alt="" /></Link>
+                                <Link to="/signup"><img className="h-10 w-10" src={img1} alt="" /></Link>
                             </div>
                         </>
                 }

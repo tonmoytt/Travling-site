@@ -3,19 +3,18 @@ import Header from "./Home/Header/Header";
 import Navbar from "./Navbar/Navbar";
 
 const Root = () => {
-    // const location = useLocation();
+//   const location = useLocation();
 
-    
-    // const showHeader = location.pathname === "/" || location.pathname === "/home";
+//   // Hide navbar on /login and /signup
+//   const hideNavbar = location.pathname === "/login" || location.pathname === "/signup";
 
-    return (
-        <div>
-           
-            <Navbar />
-             
-            <Outlet />
-        </div>
-    );
+  return (
+    <div>
+      {/* {!hideNavbar && } */}
+      <Navbar />
+      <Outlet />
+    </div>
+  );
 };
 
 export default Root;

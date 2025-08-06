@@ -21,6 +21,7 @@ import Room1 from './All Components/Root/Navbar/Room/Room1';
 import Room2 from './All Components/Root/Navbar/Room/Room2/Room2';
 import PriverRoute from './All Components/Root/Authinction/Signup/PriverRoute/PriverRoute';
 import WishlistProvider from './All Components/Root/Navbar/Wishlist/Wishlist provider/WishlistProvider';
+import Details from './All Components/Root/Home/Post/Details/Details';
 
 const router = createBrowserRouter([
   {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/Wishlist",
         element: <PriverRoute><Wishlist></Wishlist></PriverRoute>
+      },
+      {
+        path: "/details/:id",
+        element: <PriverRoute><Details></Details></PriverRoute>
       },
 
     ]

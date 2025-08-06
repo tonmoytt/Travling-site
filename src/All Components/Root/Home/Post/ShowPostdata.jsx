@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-import loveIcon from "./../../../../assets/images/bal-removebg-preview.png";
 import axios from "axios";
-import Swal from "sweetalert2"; // optional alert
-
+import Swal from "sweetalert2";
+import { FaStar, FaStarHalfAlt, FaRegStar, FaHeart, FaMapMarkerAlt } from "react-icons/fa";
 
 const ShowPostdata = ({ data }) => {
-    // eslint-disable-next-line react/prop-types
     const { id, image, authorImage, name, location, rating, rating2, price } = data;
 
-    // ❤️ Add to Wishlist Function
+    // ❤️ Add to Wishlist
     const handleAddToWishlist = async () => {
         const wishlistData = {
             id,
@@ -17,12 +15,11 @@ const ShowPostdata = ({ data }) => {
             name,
             location,
             rating,
-            rating2,
             price
         };
 
         try {
-            const res = await axios.post("http://localhost:5000/wishlist", wishlistData);
+            const res = await axios.post("https://travling-server-site.vercel.app/wishlist", wishlistData);
             if (res.data.insertedId || res.status === 200) {
                 Swal.fire({
                     icon: "success",
@@ -40,56 +37,160 @@ const ShowPostdata = ({ data }) => {
         }
     };
 
+    // ⭐ Star rendering
+    const renderStars = (ratingValue) => {
+        const fullStars = Math.floor(ratingValue);
+        const hasHalfStar = ratingValue % 1 >= 0.5;
+        const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+        const stars = [];
+
+        for (let i = 0; i < fullStars; i++) {
+            stars.push(<FaStar key={`full-${i}`} className="text-yellow-500 text-sm" />);
+        }
+        if (hasHalfStar) {
+            stars.push(<FaStarHalfAlt key="half" className="text-yellow-500 text-sm" />);
+        }
+        for (let i = 0; i < emptyStars; i++) {
+            stars.push(<FaRegStar key={`empty-${i}`} className="text-yellow-500 text-sm" />);
+        }
+
+        return stars;
+    };
+
     return (
-        <div className="mb-10">
-            <div className="card card-compact w-full bg-base-100 shadow-xl">
-                <div>
-                    {/* image */}
-                    <div className="overflow-hidden">
-                        <img className="rounded-t-xl relative hover:scale-110 transition duration-700 h-72 w-full " src={image} alt="" />
-                    </div>
+        <div className="relative group shadow-xl rounded-3xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-200 hover:border-indigo-500">
 
-                    {/* author image */}
-                    <div>
-                        <img className="rounded-full h-8 w-8 absolute mx-[250px] md:mx-[300px] lg:mx-[305px] -mt-4" src={authorImage} alt="" />
-                    </div>
+            {/* Wishlist icon */}
+            <button
+                onClick={handleAddToWishlist}
+                className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md z-10 hover:bg-pink-100 transition"
+                title="Add to Wishlist"
+            >
+                <FaHeart className="text-red-500" />
+            </button>
 
-                    {/* wishlist */}
-                    <div id="dropdown">
-                        <p id="submenu3" className="text-sm text-red-500 border-2">Add to wishlist</p>
-                        <button onClick={handleAddToWishlist}>
-                            <img className="rounded-full h-10 w-10 absolute mx-[280px] md:mx-[370px] lg:mx-[380px] -mt-[220px] md:-mt-[270px] lg:-mt-[280px] hover:bg-red-300 hover:rounded-full" src={loveIcon} alt="Add to Wishlist" />
-                        </button>
-                    </div>
+            {/* Image */}
+            <img
+                src={image}
+                alt={name}
+                className="w-full h-60 object-cover group-hover:scale-110 transition duration-500"
+            />
 
-                    {/* rating */}
-                    <div className="mt-4 ml-5 ">
-                        <p>rating star</p>
-                    </div>
+            {/* Content */}
+            <div className="p-5 bg-white space-y-3">
+                <div className="flex items-center gap-1">
+                    {renderStars(rating)}
 
-                    {/* name location */}
-                    <div className="ml-5">
-                        <p className="text-lg font-bold mt-2">{name}</p>
-                        <p className="text-gray-600 mt-2">{location}</p>
-                    </div>
+                </div>
+                <h2 className="text-xl font-semibold text-gray-800 truncate">
+                    {name}
+                </h2>
 
-                    {/* others */}
-                    <div className="border-t-2 mt-6 ml-5">
-                        <div className="flex items-center mt-6">
-                            <p className="border border-success bg-gray-100 px-2 py-1 text-blue-500 font-bold w-[70px] rounded-lg">{rating2}</p>
-                            <p className="font-bold ml-3 font-mono">Excellent</p>
-                            <p className="ml-2">({rating} review)</p>
-                        </div>
-                    </div>
+                {/* Stars */}
 
-                    <p className="mt-2 ml-5 pb-5">
-                        <span className="text-gray-600 text-sm">From : </span>
-                        <span className="text-lg font-bold">{price}</span>
-                        <span className="text-base text-gray-500">/night</span>
+
+                {/* Location */}
+                <div className="text-gray-600 text-sm flex items-center gap-1 text-end">
+                    <FaMapMarkerAlt className="text-red-400" />
+                    <span>{location}</span>
+                </div>
+
+                {/* Price & Rating */}
+                <div className="flex justify-between items-center border-t pt-3">
+                    <p className="text-indigo-600 font-bold text-lg">{price}</p>
+                    <p className="text-sm text-green-600 font-semibold bg-green-100 px-2 py-1 rounded-full">
+                        Excellent
                     </p>
+                </div>
+
+                {/* Author & Details */}
+                <div className="flex justify-between items-center pt-4">
+                    <div className="flex items-center gap-2">
+                        <img
+                            src={authorImage}
+                            alt={name}
+                            className="w-10 h-10 rounded-full border border-gray-300 shadow-sm"
+                        />
+                        <p className="text-sm text-gray-700 font-medium">{name}</p>
+                    </div>
+
+                    <Link
+                        to={`/details/${id}`}
+                        state={{ hotel: data }} // ← এইখানে hotel data পাঠানো হচ্ছে
+                    >
+                        <button className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm rounded-full shadow-md transition">
+                            Details
+                        </button>
+                    </Link>
+
                 </div>
             </div>
         </div>
+
+        // design 2 
+        //  <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-gradient-to-br from-white via-gray-50 to-gray-100 transform transition duration-500 hover:scale-[1.06] hover:shadow-indigo-400 hover:border-indigo-400">
+        //       {/* Wishlist icon */}
+        //       <button
+        //         onClick={handleAddToWishlist}
+        //         className="absolute top-4 right-4 bg-white rounded-full p-3 shadow-lg z-20 hover:bg-pink-100 hover:scale-110 transition-transform duration-300"
+        //         aria-label="Add to Wishlist"
+        //       >
+        //         <FaHeart className="text-red-500 text-xl" />
+        //       </button>
+
+        //       {/* Image */}
+        //       <div className="overflow-hidden rounded-t-3xl">
+        //         <img
+        //           src={image}
+        //           alt={name}
+        //           className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+        //           loading="lazy"
+        //         />
+        //         {/* subtle overlay */}
+        //         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent opacity-30 rounded-t-3xl pointer-events-none"></div>
+        //       </div>
+
+        //       {/* Content */}
+        //       <div className="p-6 bg-white">
+        //         <h3 className="text-2xl font-extrabold text-gray-900 mb-2 truncate">{name}</h3>
+
+        //         <div className="flex items-center gap-2 mb-3">
+        //           {renderStars(rating)}
+        //           <span className="text-sm text-gray-500">({rating.toFixed(1)} / 5)</span>
+        //         </div>
+
+        //         <div className="flex items-center text-gray-600 text-sm mb-5">
+        //           <FaMapMarkerAlt className="mr-1 text-indigo-500" />
+        //           <span>{location}</span>
+        //         </div>
+
+        //         <div className="flex justify-between items-center border-t border-gray-200 pt-4">
+        //           <p className="text-indigo-600 text-2xl font-bold tracking-tight"> {price}</p>
+        //           <p className="bg-green-100 text-green-700 font-semibold text-sm px-4 py-1 rounded-full shadow-sm">
+        //             Excellent
+        //           </p>
+        //         </div>
+
+        //         <div className="flex items-center justify-between mt-6">
+        //           <div className="flex items-center gap-3">
+        //             <img
+        //               src={authorImage}
+        //               alt={`${name} author`}
+        //               className="w-8 h-8 rounded-full border border-gray-300 shadow-md"
+        //               loading="lazy"
+        //             />
+        //             <p className="text-gray-700 font-semibold text-base">{name}</p>
+        //           </div>
+
+        //           <Link to={`/details/${id}`}>
+        //             <button className="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg transition duration-300 font-semibold text-sm tracking-wide">
+        //               Details
+        //             </button>
+        //           </Link>
+        //         </div>
+        //       </div>
+        //     </div>
+
     );
 };
 

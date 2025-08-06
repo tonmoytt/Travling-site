@@ -21,7 +21,7 @@ import { BiSolidWasher } from "react-icons/bi";
 const Detailhotel1 = () => {
     return (
         <div>
-            <div className="py-5 border-t-2 border-b-2 mt-2 ">
+            <div className="py-5 border-t-2 border-b-2  ">
                 <div className="flex gap-x-10 pl-6 ">
                     <Link to="/"> <h1 className=" font-semibold">Home</h1></Link>
                     <Link to="/unitedstate"> <h1 className=" font-semibold">United State</h1></Link>

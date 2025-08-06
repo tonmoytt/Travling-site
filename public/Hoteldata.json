@@ -2,281 +2,562 @@
   {
     "id": 1,
     "image": "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+      "images": [
+      "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+      "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+      "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+      "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+      "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Agoda",
     "location": "New York, NY",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$200"
+    "price": "$200",
+    "about1": "Agoda in New York, NY offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Agoda include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in New York, NY.",
+    "about3": "Every room at Agoda is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in New York, NY."
   },
   {
     "id": 2,
     "image": "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+      "images": [
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+      "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "OneFineStay",
     "location": "Los Angeles, CA",
     "rating": 5,
     "rating2": "4.9/ 5",
-    "price": "$180"
+    "price": "$180",
+    "about1": "OneFineStay in Los Angeles, CA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at OneFineStay include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Los Angeles, CA.",
+    "about3": "Every room at OneFineStay is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Los Angeles, CA."
   },
   {
     "id": 3,
     "image": "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+       "images": [
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg",
+      "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Hotel Expedia",
     "location": "Chicago, IL",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$220"
+    "price": "$220",
+    "about1": "Hotel Expedia in Chicago, IL offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Hotel Expedia include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Chicago, IL.",
+    "about3": "Every room at Hotel Expedia is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Chicago, IL."
   },
   {
     "id": 4,
     "image": "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+     "images": [
+      "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg",
+      "https://i.ibb.co/C5MCN0D5/Travelocit.jpg",
+      "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Priceline",
     "location": "Miami, FL",
     "rating": 4,
     "rating2": "4.6/ 5",
-    "price": "$250"
+    "price": "$250",
+    "about1": "Priceline in Miami, FL offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Priceline include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Miami, FL.",
+    "about3": "Every room at Priceline is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Miami, FL."
   },
   {
     "id": 5,
     "image": "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg",
+     "images": [
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+      "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+      "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Booking.com",
     "location": "San Francisco, CA",
     "rating": 4,
     "rating2": "4.8 / 5",
-    "price": "$190"
+    "price": "$190",
+    "about1": "Booking.com in San Francisco, CA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Booking.com include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in San Francisco, CA.",
+    "about3": "Every room at Booking.com is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in San Francisco, CA."
   },
   {
     "id": 6,
     "image": "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+     "images": [
+      "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+      "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+      "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Trivago",
     "location": "Seattle, WA",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$210"
+    "price": "$210",
+    "about1": "Trivago in Seattle, WA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Trivago include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Seattle, WA.",
+    "about3": "Every room at Trivago is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Seattle, WA."
   },
   {
     "id": 7,
     "image": "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+     "images": [
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg",
+      "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Orbitz",
     "location": "Dallas, TX",
     "rating": 4,
     "rating2": "4.7 / 5",
-    "price": "$230"
+    "price": "$230",
+    "about1": "Orbitz in Dallas, TX offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Orbitz include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Dallas, TX.",
+    "about3": "Every room at Orbitz is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Dallas, TX."
   },
   {
     "id": 8,
     "image": "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+     "images": [
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg",
+      "https://i.ibb.co/C5MCN0D5/Travelocit.jpg",
+      "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Travelocity",
     "location": "Boston, MA",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$240"
+    "price": "$240",
+    "about1": "Travelocity in Boston, MA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Travelocity include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Boston, MA.",
+    "about3": "Every room at Travelocity is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Boston, MA."
   },
   {
     "id": 9,
     "image": "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg",
+      "images": [
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Hotels.com",
     "location": "Denver, CO",
     "rating": 4,
     "rating2": "4.5 / 5",
-    "price": "$185"
+    "price": "$185",
+    "about1": "Hotels.com in Denver, CO offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Hotels.com include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Denver, CO.",
+    "about3": "Every room at Hotels.com is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Denver, CO."
   },
   {
     "id": 10,
     "image": "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg",
+     "images": [
+      "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+      "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+      "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+      "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Expedia Plus",
     "location": "Atlanta, GA",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$260"
+    "price": "$260",
+    "about1": "Expedia Plus in Atlanta, GA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Expedia Plus include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Atlanta, GA.",
+    "about3": "Every room at Expedia Plus is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Atlanta, GA."
   },
   {
     "id": 11,
     "image": "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "images": [
+      "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+      "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Luxury Stay",
     "location": "Las Vegas, NV",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$300"
+    "price": "$300",
+    "about1": "Luxury Stay in Las Vegas, NV offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Luxury Stay include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Las Vegas, NV.",
+    "about3": "Every room at Luxury Stay is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Las Vegas, NV."
   },
   {
     "id": 12,
     "image": "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "images": [
+      "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg",
+      "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Urban Escape",
     "location": "Austin, TX",
     "rating": 4,
     "rating2": "4.4 / 5",
-    "price": "$175"
+    "price": "$175",
+    "about1": "Urban Escape in Austin, TX offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Urban Escape include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Austin, TX.",
+    "about3": "Every room at Urban Escape is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Austin, TX."
   },
   {
     "id": 13,
     "image": "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+     "images": [
+      "https://i.ibb.co/C5MCN0D5/Travelocit.jpg",
+      "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Nature Nest",
     "location": "Portland, OR",
     "rating": 5,
     "rating2": "4.9 / 5",
-    "price": "$195"
+    "price": "$195",
+    "about1": "Nature Nest in Portland, OR offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Nature Nest include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Portland, OR.",
+    "about3": "Every room at Nature Nest is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Portland, OR."
   },
   {
     "id": 14,
     "image": "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg",
+     "images": [
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+      "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+      "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+      "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Sea Breeze",
     "location": "San Diego, CA",
     "rating": 4,
     "rating2": "4.6 / 5",
-    "price": "$210"
+    "price": "$210",
+    "about1": "Sea Breeze in San Diego, CA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Sea Breeze include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in San Diego, CA.",
+    "about3": "Every room at Sea Breeze is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in San Diego, CA."
   },
   {
     "id": 15,
     "image": "https://i.ibb.co/dNm9Z56/Orbitz.jpg",
+     "images": [
+      "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+      "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Mountain View",
     "location": "Salt Lake City, UT",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$220"
+    "price": "$220",
+    "about1": "Mountain View in Salt Lake City, UT offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Mountain View include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Salt Lake City, UT.",
+    "about3": "Every room at Mountain View is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Salt Lake City, UT."
   },
   {
     "id": 16,
     "image": "https://i.ibb.co/Tqw1cPHw/restaurant-table-interior-modern-wallpaper-preview.jpg",
+      "images": [
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg",
+      "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Cozy Cabin",
     "location": "Anchorage, AK",
     "rating": 4,
     "rating2": "4.3 / 5",
-    "price": "$160"
+    "price": "$160",
+    "about1": "Cozy Cabin in Anchorage, AK offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Cozy Cabin include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Anchorage, AK.",
+    "about3": "Every room at Cozy Cabin is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Anchorage, AK."
   },
   {
     "id": 17,
     "image": "https://i.ibb.co/3mfSM2Zr/Sea-Breeze.jpg",
+     "images": [
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg",
+      "https://i.ibb.co/C5MCN0D5/Travelocit.jpg",
+      "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Beach Paradise",
     "location": "Tampa, FL",
     "rating": 5,
     "rating2": "4.9 / 5",
-    "price": "$270"
+    "price": "$270",
+    "about1": "Beach Paradise in Tampa, FL offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Beach Paradise include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Tampa, FL.",
+    "about3": "Every room at Beach Paradise is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Tampa, FL."
   },
   {
     "id": 18,
     "image": "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+    "images": [
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+      "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Downtown Inn",
     "location": "Philadelphia, PA",
     "rating": 4,
     "rating2": "4.5 / 5",
-    "price": "$200"
+    "price": "$200",
+    "about1": "Downtown Inn in Philadelphia, PA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Downtown Inn include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Philadelphia, PA.",
+    "about3": "Every room at Downtown Inn is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Philadelphia, PA."
   },
   {
     "id": 19,
     "image": "https://i.ibb.co/C5MCN0D5/Travelocit.jpg",
+    "images": [
+      "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+      "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+      "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Sunset Villa",
     "location": "Phoenix, AZ",
     "rating": 5,
     "rating2": "5 / 5",
-    "price": "$290"
+    "price": "$290",
+    "about1": "Sunset Villa in Phoenix, AZ offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Sunset Villa include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Phoenix, AZ.",
+    "about3": "Every room at Sunset Villa is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Phoenix, AZ."
   },
   {
     "id": 20,
     "image": "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg",
+
+  "images": [
+      "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "City Lodge",
     "location": "Charlotte, NC",
     "rating": 4,
     "rating2": "4.6 / 5",
-    "price": "$185"
+    "price": "$185",
+    "about1": "City Lodge in Charlotte, NC offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at City Lodge include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Charlotte, NC.",
+    "about3": "Every room at City Lodge is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Charlotte, NC."
   },
   {
     "id": 21,
     "image": "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+  "images": [
+      "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg",
+      "https://i.ibb.co/C5MCN0D5/Travelocit.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Agoda",
     "location": "New York, NY",
     "rating": "5 / 5",
     "price": "$200",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "Agoda in New York, NY offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Agoda include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in New York, NY.",
+    "about3": "Every room at Agoda is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in New York, NY."
   },
   {
     "id": 22,
     "image": "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+      "images": [
+      "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "OneFineStay",
     "location": "Los Angeles, CA",
     "rating": "4.9 / 5",
     "price": "$180",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "OneFineStay in Los Angeles, CA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at OneFineStay include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Los Angeles, CA.",
+    "about3": "Every room at OneFineStay is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Los Angeles, CA."
   },
   {
     "id": 23,
     "image": "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "images": [
+      "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+      "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+      "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png",
+      "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+      "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Hotel Expedia",
     "location": "Chicago, IL",
     "rating": "5 / 5",
     "price": "$220",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "Hotel Expedia in Chicago, IL offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Hotel Expedia include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Chicago, IL.",
+    "about3": "Every room at Hotel Expedia is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Chicago, IL."
   },
   {
     "id": 24,
     "image": "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+     "images": [
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+      "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Priceline",
     "location": "Miami, FL",
     "rating": "4.7 / 5",
     "price": "$250",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "Priceline in Miami, FL offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Priceline include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Miami, FL.",
+    "about3": "Every room at Priceline is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Miami, FL."
   },
   {
     "id": 25,
     "image": "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "images": [
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/vvrCRsFm/Expedia-Plus-pro.jpg",
+      "https://i.ibb.co/8nDPGWw4/Downtown-Inn.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Priceline",
     "location": "Miami, FL",
     "rating": "4.7 / 5",
     "price": "$250",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "Priceline in Miami, FL offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Priceline include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Miami, FL.",
+    "about3": "Every room at Priceline is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Miami, FL."
   },
   {
     "id": 26,
     "image": "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg",
+     "images": [
+      "https://i.ibb.co/yc3TJZyc/Urban-Escape.jpg",
+      "https://i.ibb.co/C5MCN0D5/Travelocit.jpg",
+      "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+      "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+      "https://i.ibb.co/4ZRzjjbK/Luxury-Stay.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Agoda",
     "location": "New York, NY",
     "rating": "5 / 5",
     "price": "$200",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "Agoda in New York, NY offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at Agoda include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in New York, NY.",
+    "about3": "Every room at Agoda is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in New York, NY."
   },
   {
     "id": 27,
     "image": "https://i.ibb.co/1JBLRJMW/Cozy-Cabin.jpg",
+    "images": [
+      "https://i.ibb.co/MyKXrC8f/Expedia-Plus.jpg",
+      "https://i.ibb.co/3YvYD37s/Hotels-com11.jpg",
+      "https://i.ibb.co/TYyvZB7/feature-11-600x400-111.png",
+      "https://i.ibb.co/6yBqqXY/feature-21-600x400-222.png",
+      "https://i.ibb.co/XSX1hwq/feature-1-2-600x400-333.png"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "OneFineStay",
     "location": "Los Angeles, CA",
     "rating": "4.9 / 5",
     "price": "$180",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "OneFineStay in Los Angeles, CA offers an exceptional stay with prime location and welcoming ambiance, perfect for both leisure and business travelers.",
+    "about2": "Facilities at OneFineStay include modern rooms, complimentary Wi-Fi, on-site dining, and easy access to key attractions in Los Angeles, CA.",
+    "about3": "Every room at OneFineStay is designed for comfort and elegance, featuring premium bedding, climate control, and attentive service to ensure a restful visit in Los Angeles, CA."
   },
   {
     "id": 28,
     "image": "https://i.ibb.co/WWzQzj36/Sunset-Villa.jpg",
+    "images": [
+      "https://i.ibb.co/gtQVCQr/feature-20-600x400-444.png",
+      "https://i.ibb.co/HT3ZGGht/Nature-Nest.jpg",
+      "https://i.ibb.co/JFyYQWYF/Beach-Paradise.jpg",
+      "https://i.ibb.co/xqsZgx4G/City-Lodge.jpg",
+      "https://i.ibb.co/fYT16Jxd/Mountain-View.jpg"
+    ],
     "authorImage": "https://i.ibb.co/tmd8FRF/man.jpg",
     "name": "Hotel Expedia",
     "location": "Chicago, IL",
     "rating": "5 / 5",
     "price": "$220",
-    "category": "recommended"
+    "category": "recommended",
+    "about1": "Studio Allston Hotel is the ideal point of departure for your excursions in Boston (MA). Conveniently located on the Charles River near Harvard University, the property offers spacious accommodation, contemporary technology and ample facilities for an excellent visit to historic Boston.",
+    "about2": "Top features of the property include complimentary parking on-site, full service restaurant serving breakfast, lunch and dinner and free wireless internet access. Enjoy nearby jogging and bicycle paths, while children will like the play area across the street.",
+    "about3": "All rooms exude an atmosphere of total peace and harmony that feature thoughtful amenities to ensure an unparalleled sense of comfort for the guests such as air conditioning, heating, satellite/cable channels, ironing facilities and toiletries. Studio Allston Hotel is an ideal place of stay for travelers seeking charm, comfort and convenience in Boston (MA)."
   }
 ]
