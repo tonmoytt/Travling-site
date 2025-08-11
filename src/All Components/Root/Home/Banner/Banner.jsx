@@ -6,10 +6,10 @@ import { CiSearch } from "react-icons/ci";
 
 const Banner = () => {
   return (
-    <div className="pt-8 md:pt-28 relative">
+    <div className="pt-20 md:pt-28 relative">
       <div>
         <div
-          className="hero  md:h-[370px] lg:h-[640px]"
+          className="hero md:h-[370px] lg:h-[640px]"
           style={{
             backgroundImage:
               'url(https://cdn.blastness.info/media/389/colonnaresort-top/thumbs/full/iti_colonnaresort_esterni3_top.jpg)',
@@ -22,10 +22,10 @@ const Banner = () => {
 
           <div className="hero-content text-center text-white">
             <div>
-              <h1 className="mb-5 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold font-serif">
+              <h1 className="mb-5 text-3xl md:text-6xl lg:text-7xl font-extrabold font-serif">
                 Find your next stay
               </h1>
-              <p className="font-semibold text-lg sm:text-xl">
+              <p className="font-semibold text-sm md:text-lg">
                 Get the best prices on 2,000,000+ properties, worldwide
               </p>
             </div>
