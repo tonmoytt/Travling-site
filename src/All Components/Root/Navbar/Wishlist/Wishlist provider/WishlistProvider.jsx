@@ -1,63 +1,66 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import { useContext } from 'react';
 import { AuthConnect } from '../../../Authinction/Signup/Authinction/Authinction';
- 
 
 export const WishlistContext = createContext();
 
 const WishlistProvider = ({ children }) => {
-  const { user } = useContext(AuthConnect); // email ব্যবহার করার জন্য
+  const { user } = useContext(AuthConnect);
   const [wishlist, setWishlist] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Fetch wishlist from backend
   const fetchWishlist = () => {
-    if (user?.email) {
-      setLoading(true);
-      axios
-        .get(`https://travling-server-site.vercel.app/wishlist?email=${user.email}`)
-        .then((res) => {
-          setWishlist(res.data || []);
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.error('Error fetching wishlist:', err);
-          setLoading(false);
-        });
+    if (!user?.email) {
+      setWishlist([]);
+      setLoading(false);
+      return;
     }
+    setLoading(true);
+    axios.get(`http://localhost:5000/wishlist?email=${user.email}`)
+      .then(res => {
+        setWishlist(res.data || []);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Error fetching wishlist:', err);
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
     fetchWishlist();
   }, [user]);
 
-  // ✅ Add to wishlist (backend & context)
   const addToWishlist = (item) => {
-    axios.post('https://travling-server-site.vercel.app/wishlist', item)
-      .then((res) => {
+    setLoading(true);
+    axios.post('http://localhost:5000/wishlist', item)
+      .then(res => {
         if (res.data.insertedId) {
-          fetchWishlist(); // ✅ Re-fetch
+          fetchWishlist();
+        } else {
+          setLoading(false);
         }
       })
-      .catch((err) => console.error('Error adding to wishlist:', err));
+      .catch(err => {
+        console.error('Error adding to wishlist:', err);
+        setLoading(false);
+      });
   };
 
-  // ✅ Remove from wishlist (backend & context)
   const removeFromWishlist = (id) => {
-  axios.delete(`https://travling-server-site.vercel.app/wishlist/${id}`)
-    .then((res) => {
-      if (res.data.deletedCount > 0) {
-        // Locally remove item from wishlist state immediately
-        setWishlist(prevWishlist => prevWishlist.filter(item => item._id !== id));
-
-        // Optional: re-fetch if you want to be sure with backend state
-        // fetchWishlist();
-      }
-    })
-    .catch((err) => console.error('Error removing wishlist item:', err));
-};
-
+    setLoading(true);
+    axios.delete(`http://localhost:5000/wishlist/${id}`)
+      .then(res => {
+        if (res.data.deletedCount > 0) {
+          setWishlist(prev => prev.filter(item => item._id !== id));
+        }
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Error removing wishlist item:', err);
+        setLoading(false);
+      });
+  };
 
   return (
     <WishlistContext.Provider value={{ wishlist, addToWishlist, removeFromWishlist, loading }}>

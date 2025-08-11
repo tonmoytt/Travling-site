@@ -1,43 +1,68 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 import axios from "axios";
 import Swal from "sweetalert2";
 import { FaStar, FaStarHalfAlt, FaRegStar, FaHeart, FaMapMarkerAlt } from "react-icons/fa";
+import { AuthConnect } from "../../Authinction/Signup/Authinction/Authinction";
+import { useContext } from "react";
 
 const ShowPostdata = ({ data }) => {
-    const { id, image, authorImage, name, location, rating, rating2, price } = data;
+    const { id, image, authorImage, name, location, rating, rating2, price, email } = data;
+      const { user } = useContext(AuthConnect);
 
     // ❤️ Add to Wishlist
-    const handleAddToWishlist = async () => {
-        const wishlistData = {
-            id,
-            image,
-            authorImage,
-            name,
-            location,
-            rating,
-            price
-        };
+  const handleAddToWishlist = async () => {
+  if (!user?.email) {
+    Swal.fire({
+      icon: "warning",
+      title: "Please login first",
+    });
+    return;
+  }
 
-        try {
-            const res = await axios.post("https://travling-server-site.vercel.app/wishlist", wishlistData);
-            if (res.data.insertedId || res.status === 200) {
-                Swal.fire({
-                    icon: "success",
-                    title: "Added to Wishlist!",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            }
-        } catch (error) {
-            Swal.fire({
-                icon: "error",
-                title: "Something went wrong",
-                text: error.message,
-            });
-        }
-    };
+  const wishlistData = {
+    id,
+    email: user.email,  // user থেকে email নিয়ে আসো
+    image,
+    authorImage,
+    name,
+    location,
+    rating,
+    price
+  };
 
-    // ⭐ Star rendering
+  console.log("Wishlist data to send:", wishlistData);
+
+  try {
+    const res = await axios.post("http://localhost:5000/wishlist", wishlistData);
+    if (res.data.insertedId || res.status === 200) {
+      Swal.fire({
+        icon: "success",
+        title: "Added to Wishlist!",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+  } catch (error) {
+    if (error.response?.status === 400 && error.response.data.message === "Item already added to wishlist") {
+      Swal.fire({
+        icon: "info",
+        title: "Already added!",
+        text: "This item is already in your wishlist.",
+        timer: 2000,
+        showConfirmButton: false,
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Something went wrong",
+        text: error.message,
+      });
+    }
+  }
+};
+
+
+    // ⭐ Star rendering (unchanged)
     const renderStars = (ratingValue) => {
         const fullStars = Math.floor(ratingValue);
         const hasHalfStar = ratingValue % 1 >= 0.5;
@@ -59,7 +84,6 @@ const ShowPostdata = ({ data }) => {
 
     return (
         <div className="relative group shadow-xl rounded-3xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl border border-gray-200 hover:border-indigo-500">
-
             {/* Wishlist icon */}
             <button
                 onClick={handleAddToWishlist}
@@ -80,14 +104,10 @@ const ShowPostdata = ({ data }) => {
             <div className="p-5 bg-white space-y-3">
                 <div className="flex items-center gap-1">
                     {renderStars(rating)}
-
                 </div>
                 <h2 className="text-xl font-semibold text-gray-800 truncate">
                     {name}
                 </h2>
-
-                {/* Stars */}
-
 
                 {/* Location */}
                 <div className="text-gray-600 text-sm flex items-center gap-1 text-end">
@@ -116,18 +136,23 @@ const ShowPostdata = ({ data }) => {
 
                     <Link
                         to={`/details/${id}`}
-                        state={{ hotel: data }} // ← এইখানে hotel data পাঠানো হচ্ছে
+                        state={{ hotel: data }}
                     >
                         <button className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm rounded-full shadow-md transition">
                             Details
                         </button>
                     </Link>
-
                 </div>
             </div>
         </div>
+    );
+};
 
-        // design 2 
+export default ShowPostdata;
+
+
+
+// ui design 2 
         //  <div className="relative group rounded-3xl overflow-hidden shadow-2xl border border-gray-100 bg-gradient-to-br from-white via-gray-50 to-gray-100 transform transition duration-500 hover:scale-[1.06] hover:shadow-indigo-400 hover:border-indigo-400">
         //       {/* Wishlist icon */}
         //       <button
@@ -190,8 +215,3 @@ const ShowPostdata = ({ data }) => {
         //         </div>
         //       </div>
         //     </div>
-
-    );
-};
-
-export default ShowPostdata;

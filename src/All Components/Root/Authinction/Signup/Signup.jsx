@@ -121,7 +121,9 @@ const Signup = () => {
             )}
 
             <div className="flex items-center justify-between mt-2">
-              <p className="text-gray-500 text-base font-light">Sign up with -----> </p>
+<p className="text-gray-500 text-base font-light">
+  Sign up with -----&gt;
+</p>
               <button
                 type="button"
                 onClick={handleGoogleSignup}
