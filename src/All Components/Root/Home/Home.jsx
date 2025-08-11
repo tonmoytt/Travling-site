@@ -17,7 +17,7 @@ const Home = () => {
             <Post></Post>
             <RecomendedBenner></RecomendedBenner>
             <SubscribeOffer></SubscribeOffer>
-            <Footer></Footer>
+           
         </div>
     );
 };

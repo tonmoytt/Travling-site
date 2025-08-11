@@ -22,7 +22,7 @@ const About = () => {
 
     return (
         <div>
-            <img className='h-full w-full lg:mx-6 mt-4 rounded-3xl' src={img} alt="" />
+            <img className='h-full w-full lg:mx-6 mx-auto rounded-3xl' src={img} alt="" />
 
             <div className='pl-6 md:pl-32 mt-16 pb-10'>
                 <h1 className='text-4xl font-bold'>About the company</h1>
@@ -173,7 +173,7 @@ const About = () => {
                  
                 {showName === true && <p>You have submitted. Name: {name}</p>}
             </div> */}
-            <Footer></Footer>
+           
         </div>
     );
 };

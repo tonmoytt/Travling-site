@@ -21,17 +21,25 @@ const DestinationsBenner = () => {
         <div className='mt-20 pt-12 rounded-3xl bg-stone-100'>
             <p className="text-4xl font-bold text-center mb-10">Top Destinations </p>
 
-            <Swiper
-                slidesPerView={4}
-                spaceBetween={20}
-                grabCursor={true}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[Pagination]}
-                className="mySwiper md:6 md:mb-10 lg:mb-20 mt-4 md:mt-6 lg:mt-10"
-            >
-                <SwiperSlide className='md:mb-6 lg:mb-10'>
+          <Swiper
+  slidesPerView={5}
+  spaceBetween={20}
+  grabCursor={true}
+  pagination={{ clickable: true }}
+  modules={[Pagination]}
+  breakpoints={{
+    320: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  }}
+   className="mySwiper w-full mx-auto md:mb-10 lg:mb-20 mt-4 md:mt-6 lg:mt-10"
+>
+                <SwiperSlide className=' md:mb-6 lg:mb-10'>
                     <div className='items-center '>
                         <div className='overflow-hidden h-[100px] md:h-[220px] lg:h-[300px] w-[100px] md:w-[220px] lg:w-[300px] rounded-full'>
                             <img className='h-full hover:scale-110 transition duration-300' src={img} alt="" />
@@ -49,7 +57,7 @@ const DestinationsBenner = () => {
                             <img className='h-full hover:scale-110 transition duration-300' src={img2} alt="" />
                         </div>
                         <div className='ml-10 md:ml-16 lg:ml-28 mt-2 md:mt-4 lg:mt-6'>
-                            <h2 className='md:text-xl font-bold'>New work city</h2>
+                            <h2 className='md:text-xl font-bold'>New work </h2>
                             <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
                         </div>
                     </div>
@@ -115,7 +123,7 @@ const DestinationsBenner = () => {
                             <img className='h-full hover:scale-110 transition duration-300' src={img8} alt="" />
                         </div>
                         <div className='ml-10 md:ml-16 lg:ml-28 mt-2 md:mt-4 lg:mt-6'>
-                            <h2 className='md:text-xl font-bold'>New word city</h2>
+                            <h2 className='md:text-xl font-bold'>New word </h2>
                             <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
                         </div>
                     </div>
@@ -126,7 +134,7 @@ const DestinationsBenner = () => {
                             <img className='h-full hover:scale-110 transition duration-300' src={img10} alt="" />
                         </div>
                         <div className='ml-10 md:ml-16 lg:ml-28 mt-2 md:mt-4 lg:mt-6'>
-                            <h2 className='md:text-xl font-bold'>New word city</h2>
+                            <h2 className='md:text-xl font-bold'>New word </h2>
                             <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
                         </div>
                     </div>
@@ -137,7 +145,7 @@ const DestinationsBenner = () => {
                             <img className='h-full hover:scale-110 transition duration-300' src={img9} alt="" />
                         </div>
                         <div className='ml-10 md:ml-16 lg:ml-28 mt-2 md:mt-4 lg:mt-6'>
-                            <h2 className='md:text-xl font-bold'>New word city</h2>
+                            <h2 className='md:text-xl font-bold'>New word  </h2>
                             <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
                         </div>
                     </div>
@@ -148,7 +156,7 @@ const DestinationsBenner = () => {
                             <img className='h-full hover:scale-110 transition duration-300' src={img11} alt="" />
                         </div>
                         <div className='ml-10 md:ml-16 lg:ml-28 mt-2 md:mt-4 lg:mt-6'>
-                            <h2 className='md:text-xl font-bold'>New word city</h2>
+                            <h2 className='md:text-xl font-bold'>New word  </h2>
                             <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
                         </div>
                     </div>
@@ -159,7 +167,7 @@ const DestinationsBenner = () => {
                             <img className='h-full hover:scale-110 transition duration-300' src={img12} alt="" />
                         </div>
                         <div className='ml-10 md:ml-16 lg:ml-28 mt-2 md:mt-4 lg:mt-6'>
-                            <h2 className='md:text-xl font-bold'>New word city</h2>
+                            <h2 className='md:text-xl font-bold'>New word  </h2>
                             <p className='ml-2 mt-1 text-sm text-gray-600'>7 hotel</p>
                         </div>
                     </div>

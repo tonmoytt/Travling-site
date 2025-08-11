@@ -14,7 +14,7 @@ const Wishlist = () => {
   const fetchWishlist = () => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/wishlist")
+      .get("https://travling-server-site.vercel.app/wishlist")
       .then((res) => {
         const data = res.data;
         if (Array.isArray(data)) {
@@ -36,7 +36,7 @@ const Wishlist = () => {
   const handleDelete = (id) => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5000/wishlist/${id}`)
+      .delete(`https://travling-server-site.vercel.app/wishlist/${id}`)
       .then((res) => {
         if (res.data.deletedCount > 0) {
           fetchWishlist();

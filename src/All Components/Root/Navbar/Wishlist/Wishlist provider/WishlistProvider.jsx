@@ -16,7 +16,7 @@ const WishlistProvider = ({ children }) => {
       return;
     }
     setLoading(true);
-    axios.get(`http://localhost:5000/wishlist?email=${user.email}`)
+    axios.get(`https://travling-server-site.vercel.app/wishlist?email=${user.email}`)
       .then(res => {
         setWishlist(res.data || []);
         setLoading(false);
@@ -33,7 +33,7 @@ const WishlistProvider = ({ children }) => {
 
   const addToWishlist = (item) => {
     setLoading(true);
-    axios.post('http://localhost:5000/wishlist', item)
+    axios.post('https://travling-server-site.vercel.app/wishlist', item)
       .then(res => {
         if (res.data.insertedId) {
           fetchWishlist();
@@ -49,7 +49,7 @@ const WishlistProvider = ({ children }) => {
 
   const removeFromWishlist = (id) => {
     setLoading(true);
-    axios.delete(`http://localhost:5000/wishlist/${id}`)
+    axios.delete(`https://travling-server-site.vercel.app/wishlist/${id}`)
       .then(res => {
         if (res.data.deletedCount > 0) {
           setWishlist(prev => prev.filter(item => item._id !== id));

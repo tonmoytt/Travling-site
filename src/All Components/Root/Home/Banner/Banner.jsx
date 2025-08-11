@@ -3,136 +3,131 @@ import { BsCalendarDate } from "react-icons/bs";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { HiUsers } from "react-icons/hi2";
 import { CiSearch } from "react-icons/ci";
+
 const Banner = () => {
-
-
   return (
-    <div className="">
+    <div className="pt-8 md:pt-28 relative">
       <div>
-        <div className="hero  md:h-[370px] lg:h-[640px] " style={{ backgroundImage: 'url(https://cdn.blastness.info/media/389/colonnaresort-top/thumbs/full/iti_colonnaresort_esterni3_top.jpg)' }}>
-          <div className="hero-overlay bg-opacity-20"></div>
+        <div
+          className="hero  md:h-[370px] lg:h-[640px]"
+          style={{
+            backgroundImage:
+              'url(https://cdn.blastness.info/media/389/colonnaresort-top/thumbs/full/iti_colonnaresort_esterni3_top.jpg)',
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="hero-overlay bg-black bg-opacity-20"></div>
 
-
-
-          <div className="hero-content text-center text-neutral-content">
-            <div className="">
-              <h1 className="mb-5 text-4xl md:text-6xl lg:text-7xl font-extrabold  text-white font-serif">Find your next stay</h1>
-              <p className="font-semibold text-white text-lg">Get the best prices on 2,000,000+ properties, worldwide</p>
+          <div className="hero-content text-center text-white">
+            <div>
+              <h1 className="mb-5 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold font-serif">
+                Find your next stay
+              </h1>
+              <p className="font-semibold text-lg sm:text-xl">
+                Get the best prices on 2,000,000+ properties, worldwide
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="absolute -mt-5 md:-mt-28 lg:-mt-12 bg-white grid lg:grid-cols-4 justify-between mx-5 px-4 py-2 border md:rounded-xl lg:rounded-full ">
-          {/* section 1 */}
-          <div className="flex items-center md:border-b-2 lg:border-0   md:mt-4 lg:mt-0 w-[245px] md:w-[700px]">
+        {/* Search Bar */}
+        <div className="absolute items-center left-1/2 transform -translate-x-1/2 w-[95%] max-w-[1200px] bg-white grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 px-4 py-5 rounded-xl shadow-lg border md:rounded-full top-[75%] md:top-[80%] lg:top-[85%]">
 
-            <div>
-              <IoLocationOutline className="h-6 w-6"></IoLocationOutline>
-            </div>
-
-            <div>
-              <h1 className="font-semibold text-base ml-3 pb-1">Location</h1>
-
-              <select className="ml-1">
-                <option className="  text-sm text-gray-800  mt-10" disabled selected>Where are you going?</option>
-
-
-                <option className="text-xl font-semibold border-b-4 mt-10 mb-10">Popular destinations</option>
-                <option>United states</option>
-                <option>
-                  <div className="flex">
-                    <div>
-                      <IoLocationOutline className="text-xl"></IoLocationOutline>
-                    </div>
-                    <div>California</div>
-                  </div>
+          {/* Location */}
+          <div className="flex items-center space-x-3 border-b md:border-b-0 md:border-r border-gray-300 md:pr-4 pb-3 md:pb-0">
+            <IoLocationOutline className="h-6 w-6 text-gray-700" />
+            <div className="flex flex-col w-full">
+              <label htmlFor="location" className="text-sm font-semibold text-gray-700 mb-1">
+                Location
+              </label>
+              <select
+                id="location"
+                className="w-full text-gray-800 text-sm rounded-md border border-gray-300 px-2 py-1 focus:outline-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                defaultValue=""
+              >
+                <option value="" disabled>
+                  Where are you going?
                 </option>
-                <option>Los Angeles</option>
-                <option>Nevada</option>
-                <option>New Jersey</option>
-
-
+                <optgroup label="Popular destinations" className="font-semibold">
+                  <option value="usa">United States</option>
+                  <option value="california">California</option>
+                  <option value="losangeles">Los Angeles</option>
+                  <option value="nevada">Nevada</option>
+                  <option value="newjersey">New Jersey</option>
+                </optgroup>
               </select>
             </div>
+          </div>
 
-            <div className="hidden md:hidden lg:block border-r-2 bg-gray-700  lg:ml-28 mb-2 h-9 mt-4">
+          {/* Check-in & Check-out */}
+          <div className="flex gap-2   md:border-b-0 md:border-r  pb-3 md:pb-0 md:pr-8">
+            {/* Check-in */}
+            <div className=" flex items-center space-x-2 w-1/2">
+              <BsCalendarDate className="h-6 w-6 text-gray-700" />
+              <div className="flex flex-col w-full">
+                <label htmlFor="checkin" className="text-sm font-semibold text-gray-700 mb-1">
+                  Check in
+                </label>
+                <input
+                  type="date"
+                  id="checkin"
+                  className="rounded-md border border-gray-300 px-2 py-1 text-sm focus:outline-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                />
+              </div>
+            </div>
 
+            {/* Arrow */}
+
+
+            {/* Check-out */}
+            <div className="flex items-center space-x-2 w-1/2 ">
+              <IoCalendarNumberOutline className="h-6 w-6 text-gray-700" />
+              <div className="flex flex-col w-full">
+                <label htmlFor="checkout" className="text-sm font-semibold text-gray-700 mb-1">
+                  Check out
+                </label>
+                <input
+                  type="date"
+                  id="checkout"
+                  className="rounded-md border border-gray-300 px-2 py-1 text-sm focus:outline-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                />
+              </div>
             </div>
           </div>
-          {/* section 2 */}
-          <div className="grid md:flex md:border-b-2 lg:border-0 mt-4 md:mt-6 lg:mt-0 gap-2 ">
-            <div className="flex items-center ">
 
-              <div>
-
-                <BsCalendarDate className="h-6 w-6"></BsCalendarDate>
-              </div>
-
-              <div>
-                <h1 className="font-semibold text-base ml-3 pb-1">Check in</h1>
-
-
-                <input className="ml-2 border rounded-xl px-2 " type="date" name="" id="" />
-              </div>
-              <FaArrowRightLong className="mx-auto text-gray-400"></FaArrowRightLong>
-            </div>
-            {/* section 2.1 */}
-            <div className="flex items-center lg:ml-2">
-
-              <div>
-
-
-
-                <IoCalendarNumberOutline className="h-6 w-6"></IoCalendarNumberOutline>
-              </div>
-
-              <div>
-                <h1 className="font-semibold text-base md:ml-2 lg:ml-3 pb-1">Check out</h1>
-
-
-                <input className="lg:ml-2 border rounded-xl lg:px-2 " type="date" name="" id="" />
-              </div>
-
-            </div>
-          </div>
-          {/* section 4 */}
-          <div className="flex items-center md:border-b-2 lg:border-0 mt-4 md:mt-6 lg:mt-0 lg:ml-24 ">
-
+          {/* Guests */}
+          <div className="flex items-center border-b md:border-b-0 md:border-r border-gray-300 md:pr-6 pb-3 md:pb-0">
             <div>
-
-
-              <HiUsers className="h-6 w-6"></HiUsers>
+              <HiUsers className="h-5 w-5 mt-4 text-gray-700" />
             </div>
-
-            <div>
-              <h1 className="font-semibold text-base md:ml-1 lg:ml-3 pb-1">Guests</h1>
-
-
-              <input className="md:ml-1 lg:ml-2 border rounded-xl md:px-1 lg:px-2 " type="date" name="" id="" />
-            </div>
-            <div className=" hidden md:hidden lg:block  bg-gray-700 border-r-2 md:mx-2 lg:mx-10 mb-2 h-9 mt-4">
-
+            <div className="flex flex-col w-full ml-2">
+              <label htmlFor="guests" className="text-sm font-semibold text-gray-700 mb-1">
+                Guests
+              </label>
+              <input
+                type="number"
+                id="guests"
+                min="1"
+                defaultValue="1"
+                className="rounded-md border border-gray-300 px-2 py-1 text-sm focus:outline-indigo-500 focus:ring-1 focus:ring-indigo-500"
+              />
             </div>
           </div>
-          {/* section 5 */}
 
-          <button className=" mt-4 md:mt-6 lg:mt-0 bg-blue-500 flex  items-center justify-center text-center px-4 py-4 rounded-xl md:rounded-xl lg:rounded-full">
-
-            <div className=" ">
-              <CiSearch></CiSearch>
-            </div>
-
-            <button className=" text-white ml-4 text-center text-lg ">Search</button>
-
-
-          </button>
-
-
-
+          {/* Search Button */}
+          <div className="flex items-center justify-center">
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl py-3 px-6 transition"
+            >
+              <CiSearch className="h-6 w-6" />
+              <span className="text-lg">Search</span>
+            </button>
+          </div>
         </div>
-      </div >
-
-
+      </div>
     </div>
   );
 };
