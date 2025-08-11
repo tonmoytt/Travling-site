@@ -28,14 +28,14 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen pt-10 flex flex-col md:flex-row bg-gray-50">
+    <div className="min-h-screen flex flex-col md:flex-row bg-gray-50">
       {/* Left Image - exactly 50% width and full height */}
       <img className="h-[250px] pt-10 md:h-[500px] lg:h-[600px] w-full md:w-1/3 lg:w-[700px] rounded-r-lg rounded-sm" src={img} />
 
       {/* Right Form - 50% width */}
-      <div className="md:w-1/2 h-[560px] flex flex-col justify-center bg-white px-10  shadow-lg rounded-lg mx-4 my-10 md:my-10">
+      <div className="md:w-1/2 h-[440px] md:h-[560px] flex flex-col justify-center bg-white px-10  shadow-lg rounded-lg mx-4 my-10 md:my-10">
         {/* Branding & Header */}
-        <div className="mb-12 flex justify-between text-center md:text-left">
+        <div className="hidden md:block mb-12 flex justify-between text-center md:text-left">
           <h1 className="text-4xl font-extrabold text-green-700 tracking-wide uppercase mb-2">
            Login Now
           </h1>
@@ -113,7 +113,7 @@ const Login = () => {
           <div className="flex justify-between items-center gap-4">
             <Link
               to="/signup"
-              className="btn btn-outline btn-success rounded-full px-12 py-3 text-green-700 font-semibold hover:bg-green-600 hover:text-white transition"
+              className="btn btn-outline btn-success rounded-md md:px-12 md:py-3 text-green-700 font-semibold hover:bg-green-600 hover:text-white transition"
             >
               Signup
             </Link>
@@ -121,7 +121,7 @@ const Login = () => {
             <input
               type="submit"
               value="Next"
-              className="btn btn-accent rounded-full px-12 py-3 font-semibold text-white bg-green-600 hover:bg-green-700 cursor-pointer transition"
+              className="btn btn-accent rounded-md md:px-12 md:py-3 font-semibold text-white bg-green-600 hover:bg-green-700 cursor-pointer transition"
             />
           </div>
         </form>

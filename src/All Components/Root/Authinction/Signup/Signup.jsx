@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthConnect } from "./Authinction/Authinction";
 import swal from "sweetalert";
 import './signup.css'
+import axios from "axios";
 
 const Signup = () => {
   const { CreateUser, createGoogle } = useContext(AuthConnect);
@@ -18,7 +19,7 @@ const Signup = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    setPassword("");
+   
 
     if (password.length < 6) {
       setPassword("Password should be at least 6 characters");
@@ -37,9 +38,24 @@ const Signup = () => {
     CreateUser(email, password)
       .then((result) => {
         console.log(result.user);
-        swal("Success!", "Please Login", "success");
-        event.target.reset();
-        navigate("/login");
+
+        // Send user to backend
+        const savedUser = {
+          name,
+          lastName,
+          email,
+          createdAt: new Date()
+        };
+
+        axios.post('https://travling-server-site.vercel.app/users', savedUser, { withCredentials: true })
+          .then(res => {
+            console.log("User saved & JWT set:", res.data);
+            swal("Success!", "Please Login", "success");
+            event.target.reset();
+            navigate("/login");
+             setPassword("");
+          })
+          .catch(err => console.error("Save user error:", err));
       })
       .catch((error) => {
         console.error(error);
@@ -59,13 +75,13 @@ const Signup = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-100 via-pink-100 to-purple-200 h-[800px] flex items-center justify-center px-">
-      <div className="bg-white/30 backdrop-blur-xl  shadow-2xl flex flex-col md:flex-row max-w-9xl w-full overflow-hidden border border-white/30 md:mb-20">
+    <div className="bg-gradient-to-br from-blue-100 via-pink-100 to-purple-200 h-[800px] flex items-center justify-center pt-1 md:pt-40">
+      <div className="bg-white/30 backdrop-blur-xl  shadow-2xl flex flex-col md:flex-row max-w-9xl w-full overflow-hidden border border-white/30 mb-1 md:mb-20">
         {/* Left Side Image */}
         <img
           src={img}
           alt="Signup"
-          className="w-full md:w-1/2 object-cover h-[300px] md:h-auto transition duration-300 hover:scale-105 rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl"
+          className=" hidden md:block w-full md:w-1/2 object-cover h-[300px] md:h-auto transition duration-300 hover:scale-105 rounded-t-3xl md:rounded-tr-none md:rounded-l-3xl"
         />
 
         {/* Right Side Form */}
@@ -121,9 +137,9 @@ const Signup = () => {
             )}
 
             <div className="flex items-center justify-between mt-2">
-<p className="text-gray-500 text-base font-light">
-  Sign up with -----&gt;
-</p>
+              <p className="text-gray-500 text-base font-light">
+                Sign up with -----&gt;
+              </p>
               <button
                 type="button"
                 onClick={handleGoogleSignup}
