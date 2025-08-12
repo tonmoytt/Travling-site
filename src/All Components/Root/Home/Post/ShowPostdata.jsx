@@ -33,7 +33,9 @@ const ShowPostdata = ({ data }) => {
   console.log("Wishlist data to send:", wishlistData);
 
   try {
-    const res = await axios.post("https://travling-server-site.vercel.app/wishlist", wishlistData);
+    const res = await axios.post("https://travling-server-site.vercel.app/wishlist", wishlistData, {
+  withCredentials: true, // <== এই লাইনটা যুক্ত করো
+});
     if (res.data.insertedId || res.status === 200) {
       Swal.fire({
         icon: "success",

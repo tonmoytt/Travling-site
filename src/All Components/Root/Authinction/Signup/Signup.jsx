@@ -8,7 +8,7 @@ import axios from "axios";
 
 const Signup = () => {
   const { CreateUser, createGoogle } = useContext(AuthConnect);
-  const [password, setPassword] = useState("");
+  const [errorpassword, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSignUp = (event) => {
@@ -19,7 +19,7 @@ const Signup = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-   
+
 
     if (password.length < 6) {
       setPassword("Password should be at least 6 characters");
@@ -53,7 +53,7 @@ const Signup = () => {
             swal("Success!", "Please Login", "success");
             event.target.reset();
             navigate("/login");
-             setPassword("");
+            setPassword("");
           })
           .catch(err => console.error("Save user error:", err));
       })
@@ -63,16 +63,30 @@ const Signup = () => {
   };
 
   const handleGoogleSignup = () => {
-    createGoogle()
-      .then((result) => {
-        console.log(result.user);
-        swal("Success!", "Google Registration Successfully", "success");
-        navigate("/");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+  createGoogle()
+    .then((result) => {
+      const user = result.user;
+      const savedUser = {
+        name: user.displayName || '',
+        email: user.email,
+        createdAt: new Date()
+      };
+      axios.post('https://travling-server-site.vercel.app/users', savedUser, { withCredentials: true })
+        .then(res => {
+          swal("Success!", "Google Registration Successfully", "success");
+          navigate("/");
+        })
+        .catch(err => {
+          console.error("Save user error:", err);
+          swal("Error!", "Failed to save user on server", "error");
+        });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+
 
   return (
     <div className="bg-gradient-to-br from-blue-100 via-pink-100 to-purple-200 h-[800px] flex items-center justify-center pt-1 md:pt-40">
@@ -130,9 +144,9 @@ const Signup = () => {
               />
             </div>
 
-            {password && (
+            {errorpassword && (
               <div className="bg-red-100 text-red-700 text-center py-2 rounded-lg text-sm font-medium shadow">
-                {password}
+                {errorpassword}
               </div>
             )}
 

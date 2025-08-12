@@ -45,7 +45,9 @@ const RecommendedBanner = () => {
         };
         console.log("🚀 Sending to backend:", wishlistData);
         try {
-            const res = await axios.post('https://travling-server-site.vercel.app/wishlist-recommend', wishlistData);
+            const res = await axios.post("https://travling-server-site.vercel.app/wishlist-recommend", wishlistData, {
+                withCredentials: true, // <== এই লাইনটা যুক্ত করো
+            });
             if (res.data?.insertedId) {
                 Swal.fire({
                     icon: "success",

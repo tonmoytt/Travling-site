@@ -27,32 +27,46 @@ const Authinction = ({children}) => {
         return signOut(auth)
     }
 
-    useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (user) => {
-      console.log('Current user:', user);
-      setUser(user);
+  useEffect(() => {
+  const unsubscribe = onAuthStateChanged(auth, async (user) => {
+    console.log('Current user:', user);
+    setUser(user);
 
-      if (user?.email) {
-        const emailUser = { email: user.email };
-
-        axios.post('https://travling-server-site.vercel.app/jwt', emailUser, { withCredentials: true })
-          .then(res => {
-            console.log('JWT sent, token stored in cookie:', res.data);
-          })
-          .catch(error => {
-            console.error('JWT error:', error.message);
-          })
-          .finally(() => setloading(false));
-      } else {
-        axios.post('https://travling-server-site.vercel.app/logout', {}, { withCredentials: true })
-          .then(data => console.log('Logout success:', data.data))
-          .catch(error => console.error('Logout error:', error.message))
-          .finally(() => setloading(false));
+    if (user?.email) {
+      const emailUser = { email: user.email };
+      console.log("Sending JWT request for user:", emailUser);
+      try {
+        const res = await axios.post(
+          'https://travling-server-site.vercel.app/jwt',
+          emailUser,
+          { withCredentials: true }
+        );
+        console.log('JWT sent, token stored in cookie:', res.data);
+      } catch (error) {
+        console.error('JWT error:', error.message);
+      } finally {
+        setloading(false);
       }
- });
+    } else {
+      try {
+        const data = await axios.post(
+          'https://travling-server-site.vercel.app/logout',
+          {},
+          { withCredentials: true }
+        );
+        console.log('Logout success:', data.data);
+      } catch (error) {
+        console.error('Logout error:', error.message);
+      } finally {
+        setloading(false);
+      }
+    }
+  });
 
-    return () => unsubscribe(); 
-  }, []);
+  return () => unsubscribe();
+}, []);
+
+
 //   normal
 
     // useEffect(() => {

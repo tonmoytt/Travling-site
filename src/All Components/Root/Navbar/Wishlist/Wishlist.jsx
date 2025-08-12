@@ -14,7 +14,7 @@ const Wishlist = () => {
   const fetchWishlist = () => {
     setLoading(true);
     axios
-      .get("https://travling-server-site.vercel.app/wishlist")
+      .get("https://travling-server-site.vercel.app/wishlist", { withCredentials: true })
       .then((res) => {
         const data = res.data;
         if (Array.isArray(data)) {
@@ -33,25 +33,26 @@ const Wishlist = () => {
   };
 
   // delete function
-  const handleDelete = (id) => {
-    setLoading(true);
-    axios
-      .delete(`https://travling-server-site.vercel.app/wishlist/${id}`)
-      .then((res) => {
-        if (res.data.deletedCount > 0) {
-          fetchWishlist();
-        } else {
-          setLoading(false);
-        }
-      })
-      .catch((err) => {
-        console.error("Delete error:", err);
-        setLoading(false);
-      });
-  };
+ const handleDelete = (id) => {
+  setLoading(true);
+  axios
+    .delete(`https://travling-server-site.vercel.app/wishlist/${id}`, { withCredentials: true })
+    .then((res) => {
+      if (res.data.deletedCount > 0) {
+        // সরাসরি state থেকে আইটেম মুছে ফেলছি
+        setWishlist((prevWishlist) => prevWishlist.filter(item => item._id !== id));
+      }
+    })
+    .catch((err) => {
+      console.error("Delete error:", err);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+};
 
   return (
-    <div className="py-20 px-6 md:px-10 bg-gradient-to-br from-[#fef9f9] to-[#f2f2ff] min-h-screen">
+    <div className="pt-20 md:pt-32 px-6 md:px-10 bg-gradient-to-br from-[#fef9f9] to-[#f2f2ff] min-h-screen">
       {/* Title + Wishlist Count */}
       <p className="text-4xl font-extrabold text-center text-gray-800 mb-4">
         ❤️ My Wishlist <span className="text-indigo-600">({wishlist.length})</span>
